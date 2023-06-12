@@ -33,25 +33,35 @@
  
 ## Conferences
 
+**2023**
+
+1. P. Sheth, S. S. Sistla, I. Roychoudhury, M. Gao, C. Chatar, J. Celaya, and P. Mishra, "Real-Time Digital Log Generation from Drilling Parameters of Offset Wells Using Physics Informed Machine Learning," in Procedings of the IADC/SPE International Drilling Conference and Exhibition, Stavanger, Norway, March 2023. 
+   
+**2022**
+
+2. P. Sheth, I. Roychoudhury, C. Chatar, and J. Celaya, "A Hybrid Physics-Based and Machine-Learning Approach for Stick/Slip Prediction," in Proceedings of the IADC/SPE International Drilling Conference and Exhibition, Galveston, TX, March 2022.
+
+
 **2021**
 
-1. P. Sheth, I. Roychoudhury, C. Chatar, and J. Celaya, "A Hybrid Physics-Based and Machine-Learning Approach for Stick/Slip Prediction," in Proceedings of the IADC/SPE International Drilling Conference and Exhibition, Galveston, TX, March 2021, to appear.
+3. C. Chatar, S. Suresha, L. Shao, S. Gupta, and I. Roychoudhury, "Determining Rig State from Computer Vision Analytics," in Proceedings of the  IADC/SPE International Drilling Conference and Exhibition, Virtual, March 2021.
+
 
 **2018**
 
-2. C. Kulkarni, J. Schumann, and I. Roychoudhury, "On-board Battery Monitoring and Prognostics for Electric-Propulsion Aircraft," in Proceedings of the AIAA/IEEE Electric Aircraft Technologies Symposium (EATS), Cincinnati, OH, July 2018. 
-3. C. Kulkarni, I. Roychoudhury, and G. Gorospe, "Distributed Diagnosis of Electric Aircraft Powertrain", in Proceedings of the Fourth European Conference of the Prognostics and Health Management Society, 2018, Utrecht, The Netherlands, July 2018.​
+4. C. Kulkarni, J. Schumann, and I. Roychoudhury, "On-board Battery Monitoring and Prognostics for Electric-Propulsion Aircraft," in Proceedings of the AIAA/IEEE Electric Aircraft Technologies Symposium (EATS), Cincinnati, OH, July 2018. 
+2. C. Kulkarni, I. Roychoudhury, and G. Gorospe, "Distributed Diagnosis of Electric Aircraft Powertrain", in Proceedings of the Fourth European Conference of the Prognostics and Health Management Society, 2018, Utrecht, The Netherlands, July 2018.​
 
 **2017**
 
-4. M. Daigle, I. Roychoudhury, L. Spirkovska, K. Goebel, S. Sankararaman, J. Ossenfort, and C. Kulkarni, "Real-Time Prediction of Safety Margins in the National Airspace", in Proceedings of AIAA Aviation 2017, Denver, CO, June 2017.
+6. M. Daigle, I. Roychoudhury, L. Spirkovska, K. Goebel, S. Sankararaman, J. Ossenfort, and C. Kulkarni, "Real-Time Prediction of Safety Margins in the National Airspace", in Proceedings of AIAA Aviation 2017, Denver, CO, June 2017.
 5. L. Spirkovska, I. Roychoudhury, M. Daigle, and K. Goebel, "Real-Time Safety Monitoring: Concept for Supporting Safe Flight Operations," in Proceedings of AIAA Aviation 2017, Denver, CO, June 2017.
 1. S. Sankararaman, I. Roychoudhury, X. Zhang, and K. Goebel, "Preliminary Investigation of Impact of Technological Impairment on Trajectory-Based Operations," in Proceedings of AIAA Aviation 2017, Denver, CO, June 2017.
 2. E. Balaban, I. Roychoudhury, L. Spirkovska, S. Sankararaman, C. Kulkarni, and T. Arnon, "Dynamic Routing of Aircraft in the Presence of Adverse Weather Using a POMDP Framework," in Proceedings of AIAA Aviation 2017, Denver, CO, June 2017
 
 **2016**
 
-8. M. Daigle, A. Bregon, and I. Roychoudhury, "A Qualitative Fault Isolation Approach for Parametric and Discrete Faults Using Structural Model Decomposition," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2016, Denver, CO, October 2016. ​
+10. M. Daigle, A. Bregon, and I. Roychoudhury, "A Qualitative Fault Isolation Approach for Parametric and Discrete Faults Using Structural Model Decomposition," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2016, Denver, CO, October 2016. ​
 12. M. Daigle, S. Sankararaman, and I. Roychoudhury, "System-level Prognostics for the National Airspace," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2016, Denver, CO, October 2016. 
 13. A. Bregon, M. Daigle, and I. Roychoudhury, "Qualitative Fault Isolation of Hybrid Systems: A Structural Model Decomposition-Based Approach," in Proceedings of the Third European Conference of the Prognostics and Health Management Society 2016, Bilbao, Spain, July 2016. 
 14. M. Rigamonti, P. Baraldi, E. Zio, I. Roychoudhury, K. Goebel, and S. Poll, "Echo State Network for the Remaining Useful Life Prediction of a Turbofan Engine Under Variable Operating Conditions," in Proceedings of the Third European Conference of the Prognostics and Health Management Society 2016, Bilbao, Spain, July 2016. 
@@ -60,21 +70,21 @@
 
 **2015**
 
-14. J. Schumann, I. Roychoudhury, and C. Kulkarni, "Diagnostic Reasoning Using Prognostic Information for Unmanned Aerial Systems," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2015, Coronado, CA, October 2015.
+16. J. Schumann, I. Roychoudhury, and C. Kulkarni, "Diagnostic Reasoning Using Prognostic Information for Unmanned Aerial Systems," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2015, Coronado, CA, October 2015.
 19. M. Daigle, I. Roychoudhury, and A. Bregon, "Model-based Prognostics of Hybrid Systems,"  in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2015, Coronado, CA, October 2015.
 20. M. Daigle, A. Bregon, and I. Roychoudhury, "A Structural Model Decomposition Framework for Hybrid Systems Diagnosis," in Proceedings of the 26th International Workshop on Principles of Diagnosis, August 2015. 
 21. A. Bregon, M. Daigle, and I. Roychoudhury, "An Integrated Framework for Distributed Diagnosis of Process and Sensor Faults," in Proceedings of the 2015 IEEE Aerospace Conference, March 2015.
 
 **2014**
 
-18. M. Daigle, I. Roychoudhury, and A. Bregon, "Qualitative Event-Based Fault Isolation Under Uncertain Observations," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2014, Fort Worth, Texas, September 2014.
+20. M. Daigle, I. Roychoudhury, and A. Bregon, "Qualitative Event-Based Fault Isolation Under Uncertain Observations," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2014, Fort Worth, Texas, September 2014.
 24. M. Daigle, I. Roychoudhury, and A. Bregon, "Integrated Diagnostics and Prognostics for the Electrical Power System of a Planetary Rover," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2014, Fort Worth, Texas, September 2014.
 25. A. Sweet, G. Gorospe, M. Daigle, J. Celaya, E. Balaban, I. Roychoudhury, and S. Narasimhan, "Demonstration of Prognostics-Enabled Decision Making Algorithms on a Hardware Mobile Robot Test Platform," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2014, Fort Worth, Texas, September 2014.
 26. M. Daigle, I. Roychoudhury, and A. Bregon, "Diagnosability-based Sensor Placement Through Structural Model Decomposition," in Proceedings of the Second European Conference of the Prognostics and Health Management Society 2014, Nantes, France, July 2014.
 
 **2013**
 
-22. I. Roychoudhury, A. Saxena, J. Celaya, and K. Goebel, "Distilling the Verification Process for Prognostics Algorithms," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2013, New Orleans, LA, October 2013. (Nominated for Best Paper Award)
+24. I. Roychoudhury, A. Saxena, J. Celaya, and K. Goebel, "Distilling the Verification Process for Prognostics Algorithms," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2013, New Orleans, LA, October 2013. (Nominated for Best Paper Award)
 29. A. Bregon, S. Narasimhan, I. Roychoudhury, M. Daigle, and B, Pulido, "An Efficient Model-based Diagnosis Engine for Hybrid Systems using Structural Model Decomposition," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2013, New Orleans, LA, October 2013.
 30. M. Daigle, I. Roychoudhury, and A. Bregon, "Qualitative Event-based Diagnosis with Possible Conflicts: Case Study on the Fourth International Diagnostic Competition," in Proceedings of the 24th International Workshop on Principles of Diagnosis, Jerusalem, Israel, October 2013.
 31. R. Rajamani, A. Saxena, F. Kramer, M. Augustine, J. B. Schroeder, K. Goebel, G. Schao, I. Roychoudhury, and W. Lin, "Developing IVHM Requirements for Aerospace Systems," in SAE 2013 AeroTech Congress & Exhibition, September 2013.
@@ -84,7 +94,7 @@
 
 **2012**
 
-29. A. Bregon, M. Daigle, and I. Roychoudhury, "An Integrated Framework for Model-Based Distributed Diagnosis and Prognosis," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2012, Minneapolis, MN, September 2012.
+31. A. Bregon, M. Daigle, and I. Roychoudhury, "An Integrated Framework for Model-Based Distributed Diagnosis and Prognosis," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2012, Minneapolis, MN, September 2012.
 37. M. Daigle, I. Roychoudhury, and A. Bregon, "A Distributed Approach to System-Level Prognostics," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2012, Minneapolis, MN, September 2012.
 38. A. Bregon, M. Daigle, and I. Roychoudhury, "An Integrated Model-Based Distributed Diagnosis and Prognosis Framework," in Proceedings of the 23rd International Workshop on Principles of Diagnosis, Great Malvern, UK, July - August 2012. 
 39. S. Narasimhan, E. Balaban, M. Daigle, I. Roychoudhury, A. Sweet, J. Celaya, and K. Goebel, “Autonomous Decision Making for Planetary Rovers Using Diagnostic and Prognostic Information,” Proceedings of the 8th IFAC Symposium on Fault Detection, Supervision and Safety of Technical Processes (SAFEPROCESS 2012), Mexico City, Mexico, August 2012.
@@ -95,7 +105,7 @@
 
 **2011**
 
-37. I. Roychoudhury and M. Daigle, "An Integrated Model-Based Diagnostic and Prognostic Framework," in Proceedings of the 22nd International Workshop on Principles of Diagnosis, Murnau, Germany, October 2011.
+39. I. Roychoudhury and M. Daigle, "An Integrated Model-Based Diagnostic and Prognostic Framework," in Proceedings of the 22nd International Workshop on Principles of Diagnosis, Murnau, Germany, October 2011.
 46. A. Bregon, M. Daigle, I. Roychoudhury, G. Biswas, X. Koutsoukos, and B. Pulido, "Improving Distributed Diagnosis Through Structural Model Decomposition," in Proceedings of the 22nd International Workshop on Principles of Diagnosis, Murnau, Germany, October 2011.
 47. M. Daigle, A. Bregon, and I. Roychoudhury, "Qualitative Event-based Diagnosis with Possible Conflicts: Case Study on the Third International Diagnostics Competition", in Proceedings of the 22nd International Workshop on Principles of Diagnosis, Murnau, Germany, October 2011.
 48. M. Daigle, I. Roychoudhury, S. Narasimhan, B. Saha, S. Saha, and K. Goebel, "Investigating the Effect of Damage Progression Model Choice on Prognostics Performance," in Proceedings of the Annual Conference of the Prognostics and Health Management Society 2011, Montreal, Canada, September 2011. (Best Paper, Theoretical Paper Category)
@@ -105,7 +115,7 @@
 
 **2010**
 
-44. S. Narasimhan, I. Roychoudhury, E. Balaban, and A. Saxena, "Combining Model-Based and Feature-Driven Diagnosis Approaches -  A Case Study on Electromechanical Actuators," in Proceedings of the 21st International Workshop on Principles of Diagnosis, October 2010.
+46. S. Narasimhan, I. Roychoudhury, E. Balaban, and A. Saxena, "Combining Model-Based and Feature-Driven Diagnosis Approaches -  A Case Study on Electromechanical Actuators," in Proceedings of the 21st International Workshop on Principles of Diagnosis, October 2010.
 55. M. Daigle, I. Roychoudhury, G. Biswas, and X. Koutsoukos, "An Event-based Approach to Distributed Diagnosis of Continuous Systems," in Proceedings of the 21st International Workshop on Principles of Diagnosis, October 2010.
 56. M. Daigle and I. Roychoudhury, "Qualitative Event-based Diagnosis: Case Study on the Second International Diagnostic Competition," in Proceedings of the 21st International Workshop on Principles of Diagnosis, October 2010.
 57. E. Balaban, A. Saxena, S. Narasimhan, I. Roychoudhury, K. Goebel, and M. Koopmans, "Airborne Electro-Mechanical Actuator Test Stand for Development of Prognostic Health Management Systems," in Proceedings of the Annual Conference of the Prognostics and Health Management Society, October 2010.
@@ -115,19 +125,19 @@
 
 **2009**
 
-51. I. Roychoudhury, G. Biswas, and X. Koutsoukos, "Factoring Dynamic Bayesian Networks Based on Structural Observability," Proceedings of 48th IEEE Conference on Decision and Control (IEEE CDC 2009), Shanghai, P. R. China, December 2009.
+53. I. Roychoudhury, G. Biswas, and X. Koutsoukos, "Factoring Dynamic Bayesian Networks Based on Structural Observability," Proceedings of 48th IEEE Conference on Decision and Control (IEEE CDC 2009), Shanghai, P. R. China, December 2009.
 63. I. Roychoudhury, G. Biswas, and X. Koutsoukos, "Distributed Diagnosis of Dynamic Systems Using Dynamic Bayesian Networks", in Proceedings of the 20th International Workshop on Principles of Diagnosis, Stockholm, Sweden, June 2009.
 64. I. Roychoudhury, M. Daigle, G. Biswas, X. Koutsoukos, A. Patterson-Hine, and S. Poll, "Comprehensive Diagnosis of Complex Electrical Power Systems," 7th IFAC Symposium on Fault Detection, Supervision, and Safety of Technical Processes (SAFEPROCESS 2009), June 2009.
 65. I. Roychoudhury, G. Biswas, and X. Koutsoukos, "Efficient Estimation for Diagnosis Using Factored Dynamic Bayesian Networks," 7th IFAC Symposium on Fault Detection, Supervision, and Safety of Technical Processes (SAFEPROCESS 2009), June 2009
 
 **2008**
 
-55. I. Roychoudhury, G. Biswas, and X. Koutsoukos, "Comprehensive Diagnosis of Continuous Systems Using Dynamic Bayes Nets", in Proceedings of the 19th International Workshop on Principles of Diagnosis, pp. 151-158, Blue Mountains, Australia, September 2008.
+57. I. Roychoudhury, G. Biswas, and X. Koutsoukos, "Comprehensive Diagnosis of Continuous Systems Using Dynamic Bayes Nets", in Proceedings of the 19th International Workshop on Principles of Diagnosis, pp. 151-158, Blue Mountains, Australia, September 2008.
 68. I. Roychoudhury, M. Daigle, G. Biswas, and X. Koutsoukos, "Efficient Simulation of Hybrid Systems: An Application to Electrical Power Distribution Systems," in Proceedings of the 22nd European Conference on Modeling and Simulation, pp. 471-477, June 2008.
 
 **2007**
 
-57. S. Poll, A. Patterson-Hine, J. Camisa, D. Nishikawa, L. Spirkovska, D. Garcia, D. Hall, C. Neukom, A. Sweet, S. Yentus, C. Lee, J. Ossenfort, I. Roychoudhury, M. Daigle, G. Biswas, X. Koutsoukos, and R. Lutz, "Evaluation, Selection, and Application of Model-Based Diagnosis Tools and Approaches," AIAA Infotech@Aerospace 2007 Conference and Exhibit, May 2007.
+59. S. Poll, A. Patterson-Hine, J. Camisa, D. Nishikawa, L. Spirkovska, D. Garcia, D. Hall, C. Neukom, A. Sweet, S. Yentus, C. Lee, J. Ossenfort, I. Roychoudhury, M. Daigle, G. Biswas, X. Koutsoukos, and R. Lutz, "Evaluation, Selection, and Application of Model-Based Diagnosis Tools and Approaches," AIAA Infotech@Aerospace 2007 Conference and Exhibit, May 2007.
 71. S. Poll, A. Patterson-Hine, J. Camisa, D. Garcia, D. Hall, C. Lee, O. Mengshoel, C. Neukom, D. Nishikawa, J. Ossenfort, A. Sweet, S. Yentus, I. Roychoudhury, M. Daigle, G. Biswas, and X. Koutsoukos, "Advanced Diagnostics and Prognostics Testbed," 18th International Workshop on Principles of Diagnosis, pp. 178-185, May 2007.
 72. A. Moustafa, M. Daigle, I. Roychoudhury, C. Shantz, G. Biswas, S. Mahadevan, and X. Koutsoukos, "Fault Diagnosis of Civil Engineering Structures using the Bond Graph Approach," 18th International Workshop on Principles of Diagnosis, pp. 146-153, May 2007.
 73. M. Daigle, I. Roychoudhury, G. Biswas, and X. Koutsoukos, "Efficient Simulation of Component-Based Hybrid Models Represented as Hybrid Bond Graphs," Hybrid Systems: Computation and Control (HSCC 2007), vol. 4416, pp. 680-683, Apr 2007. (short paper)
@@ -135,11 +145,11 @@
 
 **2006**
 
-62. I. Roychoudhury, G. Biswas, X. Koutsoukos, "A Bayesian Approach to Efficient Diagnosis of Incipient Faults", 17th International Workshop on Principles of Diagnosis (DX 06), Spain, pp. 243 - 250, June 2006.
+64. I. Roychoudhury, G. Biswas, X. Koutsoukos, "A Bayesian Approach to Efficient Diagnosis of Incipient Faults", 17th International Workshop on Principles of Diagnosis (DX 06), Spain, pp. 243 - 250, June 2006.
 
 **2005**
 
-63. I. Roychoudhury, G. Biswas, X. Koutsoukos, and S. Abdelwahed, "Designing distributed diagnosers for complex physical systems", in Proceedings of the 16th International Workshop on Principles of Diagnosis (DX 05), Monterey, California, pp. 31 - 36, June 2005.
+65. I. Roychoudhury, G. Biswas, X. Koutsoukos, and S. Abdelwahed, "Designing distributed diagnosers for complex physical systems", in Proceedings of the 16th International Workshop on Principles of Diagnosis (DX 05), Monterey, California, pp. 31 - 36, June 2005.
 
  
 ## Technical Reports
