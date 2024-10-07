@@ -11,19 +11,20 @@
  
 ## Journals
 
-1. O. Bektas, J. A. Jones, S. Sankararaman, I. Roychoudhury, and K. Goebel, "A Neural Network Framework for Similarity-Based Prognostics," MethodsX, to appear, February 2019. Published online as https://doi.org/10.1016/j.mex.2019.02.015.
-2. O. Bektas, J. A. Jones, S. Sankararaman, I. Roychoudhury, and K. Goebel, "Reconstructing Secondary Test Database from PHM08 Challenge Data Set,", Data in Brief, vol. 21, pp. 2464-2469, November 2018.
-3. O. Bektas, J. A. Jones, S. Sankararaman, I. Roychoudhury, and K. Goebel, "A Neural Network Filtering Approach for Similarity-Based Remaining Useful Life Estimation," The International Journal of Advanced Manufacturing Technology, pp. 1-17, October 2018.
-4. M. Rigamonti, P. Baraldi, E. Zio, I. Roychoudhury, K. Goebel, and S. Poll, "Ensemble of Optimized Echo State Networks for Remaining Useful Life Prediction," Neurocomputing, vol. 281, pp. 121-138, March 2018.
-5. M. Daigle, I. Roychoudhury, and A. Bregon, "Qualitative Event-based Diagnosis Applied to a Spacecraft Electrical Power Distribution System," Control Engineering Practice, vol. 38, pp. 75-91, May 2015.
-6. E. Balaban, A. Saxena, S. Narasimhan, I. Roychoudhury, M. Koopmans, C. Ott, and K. Goebel,  "Prognostic Health Management System Development for Electro-Mechanical Actuators," Journal of Aerospace Information Systems,  vol. 12, no. 3, pp. 329-344, March 2015. Published online as doi: 10.2514/1.I010171 
-7. M. Daigle, A. Bregon, and I. Roychoudhury, "Distributed Prognostics Based on Structural Model Decomposition," IEEE Transactions on Reliability, vol. 63, no. 2, pp. 495-510, June 2014. Published online as doi: 10.1109/TR.2014.2313791.
-8. A. Bregon, M. Daigle, I. Roychoudhury, G. Biswas, X. Koutsoukos, and B. Pulido, "An Event-based Distributed Diagnosis Framework using Structural Model Decomposition," Artificial Intelligence, vol. 210, no. 0, pp. 1-35, Feb 2014.
-9. E. Balaban, S. Narasimhan, M. Daigle, I. Roychoudhury, A. Sweet, C. Bond, and G. Gorospe, "Development of a Mobile Robot Test Platform and Methods for Validation of Prognostics-Enabled Decision Making Algorithms," International Journal of Prognostics and Health Management, vol. 4, no. 1, May 2013.
-10. I. Roychoudhury, M. Daigle, G. Biswas, and X. Koutsoukos, "Efficient Simulation of Hybrid Systems: A Hybrid Bond Graph Approach," SIMULATION: Transactions of the Society for Modeling and Simulation International, vol. 87, no. 6, pp. 467-498, June 2011. Published online on April, 2010 as doi:10.1177/0037549710364478 (abstract).
-11. M. Daigle, I. Roychoudhury, G. Biswas, X. Koutsoukos, "A Comprehensive Diagnosis Methodology for Complex Hybrid Systems: A Case Study on Spacecraft Power Distribution Systems," IEEE Transactions on System, Man, and Cybernetics, Part A: Special issue on "Model-based Diagnosis: Facing Challenges in Real-world Applications", vol. 4, no. 5, pp. 917-931, September 2010.
-12. I. Roychoudhury, G. Biswas, and X. Koutsoukos, "Designing Distributed Diagnosers for Complex Continuous Systems," IEEE Transactions on Automation Science and Engineering, vol. 6, no. 2, pp. 277-290, April 2009.
-13. I. Roychoudhury, M. Daigle, G. Biswas, and X. Koutsoukos, "An Efficient Method for Simulating Complex Systems with Switching Behaviors Using Hybrid Bond Graphs," Simulation News Europe , vol. 18, no. 3-4, pp. 5-13, December 2008.
+1. P. Sheth, S. S. Sistla, I. Roychoudhury, M. Gao, C. Chatar, J. Celaya, P. Mishra, "Real-Time Gamma Ray Log Generation from Drilling Parameters of Offset Wells Using Physics-Informed Machine Learning," SPE Journal, 1-11, November 2023.
+2. O. Bektas, J. A. Jones, S. Sankararaman, I. Roychoudhury, and K. Goebel, "A Neural Network Framework for Similarity-Based Prognostics," MethodsX, to appear, February 2019. Published online as https://doi.org/10.1016/j.mex.2019.02.015.
+3. O. Bektas, J. A. Jones, S. Sankararaman, I. Roychoudhury, and K. Goebel, "Reconstructing Secondary Test Database from PHM08 Challenge Data Set,", Data in Brief, vol. 21, pp. 2464-2469, November 2018.
+4. O. Bektas, J. A. Jones, S. Sankararaman, I. Roychoudhury, and K. Goebel, "A Neural Network Filtering Approach for Similarity-Based Remaining Useful Life Estimation," The International Journal of Advanced Manufacturing Technology, pp. 1-17, October 2018.
+5. M. Rigamonti, P. Baraldi, E. Zio, I. Roychoudhury, K. Goebel, and S. Poll, "Ensemble of Optimized Echo State Networks for Remaining Useful Life Prediction," Neurocomputing, vol. 281, pp. 121-138, March 2018.
+6. M. Daigle, I. Roychoudhury, and A. Bregon, "Qualitative Event-based Diagnosis Applied to a Spacecraft Electrical Power Distribution System," Control Engineering Practice, vol. 38, pp. 75-91, May 2015.
+7. E. Balaban, A. Saxena, S. Narasimhan, I. Roychoudhury, M. Koopmans, C. Ott, and K. Goebel,  "Prognostic Health Management System Development for Electro-Mechanical Actuators," Journal of Aerospace Information Systems,  vol. 12, no. 3, pp. 329-344, March 2015. Published online as doi: 10.2514/1.I010171 
+8. M. Daigle, A. Bregon, and I. Roychoudhury, "Distributed Prognostics Based on Structural Model Decomposition," IEEE Transactions on Reliability, vol. 63, no. 2, pp. 495-510, June 2014. Published online as doi: 10.1109/TR.2014.2313791.
+9. A. Bregon, M. Daigle, I. Roychoudhury, G. Biswas, X. Koutsoukos, and B. Pulido, "An Event-based Distributed Diagnosis Framework using Structural Model Decomposition," Artificial Intelligence, vol. 210, no. 0, pp. 1-35, Feb 2014.
+10. E. Balaban, S. Narasimhan, M. Daigle, I. Roychoudhury, A. Sweet, C. Bond, and G. Gorospe, "Development of a Mobile Robot Test Platform and Methods for Validation of Prognostics-Enabled Decision Making Algorithms," International Journal of Prognostics and Health Management, vol. 4, no. 1, May 2013.
+11. I. Roychoudhury, M. Daigle, G. Biswas, and X. Koutsoukos, "Efficient Simulation of Hybrid Systems: A Hybrid Bond Graph Approach," SIMULATION: Transactions of the Society for Modeling and Simulation International, vol. 87, no. 6, pp. 467-498, June 2011. Published online on April, 2010 as doi:10.1177/0037549710364478 (abstract).
+12. M. Daigle, I. Roychoudhury, G. Biswas, X. Koutsoukos, "A Comprehensive Diagnosis Methodology for Complex Hybrid Systems: A Case Study on Spacecraft Power Distribution Systems," IEEE Transactions on System, Man, and Cybernetics, Part A: Special issue on "Model-based Diagnosis: Facing Challenges in Real-world Applications", vol. 4, no. 5, pp. 917-931, September 2010.
+13. I. Roychoudhury, G. Biswas, and X. Koutsoukos, "Designing Distributed Diagnosers for Complex Continuous Systems," IEEE Transactions on Automation Science and Engineering, vol. 6, no. 2, pp. 277-290, April 2009.
+14. I. Roychoudhury, M. Daigle, G. Biswas, and X. Koutsoukos, "An Efficient Method for Simulating Complex Systems with Switching Behaviors Using Hybrid Bond Graphs," Simulation News Europe , vol. 18, no. 3-4, pp. 5-13, December 2008.
 
  
 ## Theses
@@ -32,6 +33,10 @@
 
  
 ## Conferences
+
+**2024**
+
+1. P. Sheth and I. Roychoudhury, "Robust Remaining Useful Life Prediction Using Jacobian Feature Regression-Based Model Adaptation," in Proceedings of the 8th European Conference of the Prognostics and Health Management Society, July 2024.
 
 **2023**
 
