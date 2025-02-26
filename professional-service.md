@@ -13,9 +13,13 @@ date: 06/06/2023
 
 ## Conference Organization
 
+
+* 34th International Workshop on Principles of Diagnosis (DX-23), Program Committee Member
+* Annual Conference of the Prognostics and Health Management Society, 2023, Technical Program Committee Co-Chair, Website Development Co-Chair
+* Annual Conference of the Prognostics and Health Management Society, 2022, Technical Program Committee Member, Website Development Co-Chair
 * 32nd International Conference on Industrial, Engineering & Other Applications of Applied Intelligent Systems (IEA/AIA 2019), Program Committee Member
-* ​28th International Workshop on Principles of Diagnosis (DX-17), Program Committee Member
-* IEEE Aerospace Conference, 2017﻿, Sessions Co-Chair, Session titled - Systems Health Management for Space Systems and Operations
+* 28th International Workshop on Principles of Diagnosis (DX-17), Program Committee Member
+* IEEE Aerospace Conference, 2017, Sessions Co-Chair, Session titled - Systems Health Management for Space Systems and Operations
 * 27th International Workshop on Principles of Diagnosis (DX-16), Program Committee Member
 * Annual Conference of the Prognostics and Health Management Society, 2016, Web Chair
 * Third European Conference of the Prognostics and Health Management Society, 2016,  Technical Program Committee Member, Web Chair
