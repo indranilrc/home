@@ -13,6 +13,7 @@
 
 ## Group Awards
 
+* Performed by SLB - Bronze Award 2022. The Performed by SLB (PbS) is an annual companywide award program that gives SLB teams a chance to showcase projects that demonstrate exceptional levels of teamwork, innovation, and business impact. Sponsored by SLB’s CEO, the 22nd edition of the program received more than 1,000 projects for consideration through various recognition rounds, with a limited number of excellent projects being recognized by a Bronze, Silver, Gold or CEO Award. Projects submitted are reviewed and selected by senior SLB management for the Bronze Award in each of the three categories: Customer Performance, Operations Excellence, and Innovation.
 * NASA Group Achievement Award awared to the Systems-Health and Operations Open-Data Team for outstanding contributions to the open data initiative by conducting and posting experimental system fault and run-to-failure data sets with exceptional scientific value, June, 2018 
 * NASA Group Achievement Award awarded to the Discovery and Systems Health Open-Sourcing Team for outstanding contributions in open sourcing software tools for health management and data science practitioners, June 2017
 * PHM Society Contributor of the Year Award awarded to the NASA Prognostics Center of Excellence, October 2017
