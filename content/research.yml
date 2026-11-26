@@ -1,0 +1,86 @@
+# Research themes, in display order. Keys under `pubs` are CV bibitem keys
+# or patent keys from content/generated/publications.json.
+
+- id: automating-phm
+  title: Automating health monitoring
+  org: SLB
+  period: 2022–present
+  summary: Tools that let engineers build and check health monitoring without a specialist for every asset.
+  body: |
+    Most health monitoring is still built by hand, one equipment type at a time, by people who
+    specialize in it. We have been automating the routine parts: picking and fitting models,
+    adapting a trained model when field data drifts away from what it was trained on, and judging
+    whether a remaining-useful-life prediction can be trusted when no unit has ever been run to failure.
+  pubs: [C1new, C2, US20250315037, US20260133574, US20250315649, US20250315038]
+
+- id: hybrid-models
+  title: Physics-informed and hybrid models
+  org: SLB
+  period: 2020–present
+  summary: Combining physics with machine learning so models stay fast and stay plausible.
+  body: |
+    Physics models are trustworthy but often slow or incomplete. Machine learning is fast but has no
+    sense of what is physically possible. We combine the two: generating gamma-ray logs in real time
+    from surface drilling data, predicting stick/slip in rotary drilling, and a general tool for
+    building hybrid models across quite different physical systems.
+  pubs: [SPEJ-24, C3, EP4630852, C4, EP4423542, US20260203471, PhysMLWP]
+
+- id: foundation-models
+  title: Foundation models for industrial time series
+  org: SLB
+  period: 2024–present
+  summary: Pretrained models for sensor data, and health monitoring in their latent space.
+  body: |
+    A model pretrained on sensor data from many assets can be adapted to a new asset that has little
+    data of its own. We have built asset-specific time series foundation models for surface production
+    equipment, along with methods that run health monitoring and prognostics in the model's latent
+    space instead of on raw signals.
+  pubs: [C2new, US20260079480, US20260079511]
+
+- id: field-data
+  title: Learning from field images and failure records
+  org: SLB
+  period: 2019–present
+  summary: Video, images, and teardown records as signals in their own right.
+  body: |
+    Some of the most useful information in the field is not a sensor channel. We have used rig-floor
+    video to recognize what a drilling rig is doing, camera images to detect gas leaks, and historical
+    teardown and inspection records, together with production data, to work out where an electric
+    submersible pump first failed.
+  pubs: [C5, US12136267, US12467818, US12608592]
+
+- id: airspace-safety
+  title: Airspace safety
+  org: NASA Ames Research Center
+  period: 2012–2018
+  summary: Monitoring and predicting safety margins across the National Airspace System.
+  body: |
+    With colleagues at NASA Ames, I worked on monitoring and predicting safety margins across the
+    National Airspace System in real time from live flight data. Earlier work looked at what
+    unrestricted operation of unmanned aircraft would mean for delays, congestion, and separation.
+  pubs: [C8, C9, C16, C17, C13, RTMPAS-15, AIAA-12-a, C11]
+
+- id: aerospace-phm
+  title: Health management for aerospace systems
+  org: NASA Ames Research Center
+  period: 2009–2018
+  summary: Diagnostics and prognostics for actuators, batteries, rovers, and life support.
+  body: |
+    Diagnostics and prognostics for aerospace hardware: electro-mechanical actuators, including an
+    airborne test stand, batteries on electric aircraft and planetary rovers, and a water recycling
+    system of the kind needed for long crewed missions. Alongside the algorithms, we worked on how to
+    verify prognostics and how to write requirements for health management systems. A lot of this
+    went into the textbook we wrote, *Prognostics: The Science of Making Predictions*.
+  pubs: [PROG-Book, JAS-15, PHM-10-a, C6, PHM-14-b, IEEEAerospace-13-a, PHM-13-a, PHM-11-a, C29]
+
+- id: distributed-diagnosis
+  title: Distributed diagnosis
+  org: Vanderbilt University and NASA Ames
+  period: 2004–2018
+  summary: Splitting large system models so diagnosis can run locally and still be right globally.
+  body: |
+    Diagnosing a large system with one monolithic model does not scale. My PhD work at Vanderbilt
+    showed how to split a system model into pieces that can be diagnosed locally while still giving
+    the correct global answer. At NASA Ames we extended this structural model decomposition approach
+    to prognostics and to hybrid systems, and applied it to spacecraft power distribution.
+  pubs: [Dissertation, ITASE-08, AI-14, IEEE-TR-14, PHM-11-b, FDHDCS-2018, C20]

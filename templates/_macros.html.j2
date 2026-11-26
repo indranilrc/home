@@ -1,0 +1,27 @@
+{% set KIND = {"journal": "journal", "conference": "paper", "patent": "patent", "book": "book",
+               "chapter": "chapter", "report": "report", "thesis": "thesis", "whitepaper": "white paper"} %}
+
+{% macro related(p) -%}
+<li class="rel"><span class="kind">{{ KIND[p.type] }}</span>
+{%- if p.url %}<a href="{{ p.url }}" rel="noopener">{{ p.title }}</a>
+{%- else %}<a href="{{ ('/publications/#pub-' ~ p.key) | url }}">{{ p.title }}</a>{% endif %}
+{%- if p.year %}<span class="muted">, {{ p.year }}</span>{% endif %}</li>
+{%- endmacro %}
+
+
+{% macro item_list(list) -%}
+<ol class="cv-list">
+  {% for it in list %}
+  <li>{{ it.html | safe }}{% if it.children %}<ol>{% for c in it.children %}<li>{{ c.html | safe }}</li>{% endfor %}</ol>{% endif %}</li>
+  {% endfor %}
+</ol>
+{%- endmacro %}
+
+{% macro group_sections(groups, default_title="") -%}
+{% for g in groups %}
+<section class="cv-section">
+  <h2>{{ (g.title or default_title) | group_title }}</h2>
+  <div>{{ item_list(g['items']) }}</div>
+</section>
+{% endfor %}
+{%- endmacro %}

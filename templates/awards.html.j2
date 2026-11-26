@@ -1,0 +1,13 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import group_sections %}
+{% block title %}Awards · {{ site.title }}{% endblock %}
+{% block description %}Honors and awards received by Indranil Roychoudhury, individually and with research teams at NASA Ames and SLB.{% endblock %}
+{% block content %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>Awards</h1>
+    <p>Many of these were shared with the teams I worked with.</p>
+  </header>
+  {{ group_sections(content.cv.honors.groups) }}
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+name: Indranil Roychoudhury
+eyebrow: Principal AI Scientist at SLB
+description: >-
+  Indranil Roychoudhury is a Principal AI Scientist at SLB working on diagnostics,
+  prognostics, and physics-informed machine learning for industrial systems.
+lede: I work on knowing when complex machines are about to fail, and what to do before they do.
+bio: |
+  My research combines physics-based models with machine learning for diagnostics and prognostics.
+  I spent nine years at NASA Ames Research Center working on spacecraft power systems, electric
+  aircraft, and the safety of the National Airspace System. Since 2018 I have been at SLB, applying
+  the same ideas to drilling, production equipment, and new energy systems.
+
+  I did my PhD at Vanderbilt University on distributed diagnosis, co-wrote the textbook
+  *Prognostics: The Science of Making Predictions*, and am a Fellow of the PHM Society. I also teach
+  advanced time series analysis to engineers in industry. I'm always glad to hear from people
+  working on similar problems.
+photo_alt: Indranil Roychoudhury, smiling, outdoors in a light blue shirt
+email_user: indranil.r.c
+email_domain: gmail.com
+links:
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=65YthzIAAAAJ
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/indranilroychoudhury
+  - label: ORCID
+    url: https://orcid.org/0009-0002-1438-0510
+currently:
+  - title: Physics-informed machine learning
+    text: Hybrid and surrogate models that respect the physics of the systems they describe.
+  - title: Automating health monitoring
+    text: Tools that let engineers build, check, and deploy monitoring without a specialist for every asset.
+  - title: Foundation models for time series
+    text: Pretrained models for industrial sensor data, and prognostics in their latent space.
+  - title: Teaching
+    text: Advanced time series analysis for practicing engineers and scientists.
+selected_work: [automating-phm, hybrid-models, airspace-safety, distributed-diagnosis]

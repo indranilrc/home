@@ -1,0 +1,9 @@
+{% extends "base.html.j2" %}
+{% block title %}Page not found · {{ site.title }}{% endblock %}
+{% block content %}
+<div class="wrap notfound">
+  <p class="eyebrow">404</p>
+  <h1>This page doesn’t exist.</h1>
+  <p class="muted">It may have moved when the site was rebuilt. Try the <a href="{{ '/' | url }}">home page</a>, <a href="{{ '/research/' | url }}">research</a>, or <a href="{{ '/publications/' | url }}">publications</a>.</p>
+</div>
+{% endblock %}

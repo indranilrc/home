@@ -1,0 +1,88 @@
+{% extends "base.html.j2" %}
+{% block head_extra %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": profile.name,
+  "jobTitle": "Principal AI Scientist",
+  "worksFor": {"@type": "Organization", "name": "SLB"},
+  "alumniOf": {"@type": "CollegeOrUniversity", "name": "Vanderbilt University"},
+  "url": site.url ~ base ~ "/",
+  "image": site.url ~ base ~ "/img/IRCphoto.jpg",
+  "sameAs": profile.links | map(attribute="url") | list
+} | tojson }}</script>
+{% endblock %}
+{% block content %}
+<section class="hero">
+  <svg class="motif" viewBox="0 40 1000 200" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <g class="fan" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke">
+      <path d="M0,96 C120,94 220,100 320,93 S470,89 560,96" stroke-width="1.4"/>
+      <g stroke-width="0.8" opacity="0.8">
+        <path d="M560,96 C650,101 760,112 1000,126"/>
+        <path d="M560,96 C650,103 780,122 1000,144"/>
+        <path d="M560,96 C665,106 800,134 1000,162"/>
+        <path d="M560,96 C665,109 815,146 1000,180"/>
+        <path d="M560,96 C675,113 830,160 1000,201"/>
+        <path d="M560,96 C650,99 770,106 1000,113"/>
+        <path d="M560,96 C680,116 840,172 985,240"/>
+        <path d="M560,96 C660,104 790,128 1000,170"/>
+      </g>
+      <path d="M0,214 H1000" stroke-width="0.7" stroke-dasharray="2 6"/>
+    </g>
+  </svg>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">{{ profile.eyebrow }}</p>
+      <h1>{{ profile.name }}</h1>
+      <p class="lede">{{ profile.lede }}</p>
+      <div class="bio">{{ profile.bio | markdown }}</div>
+      <p class="elsewhere">
+        {% for link in profile.links %}<a href="{{ link.url }}" rel="me noopener">{{ link.label }}</a>{% endfor %}
+        <a class="email" data-u="{{ profile.email_user }}" data-d="{{ profile.email_domain }}">{{ profile.email_user }} at {{ profile.email_domain | replace('.', ' dot ') }}</a>
+      </p>
+    </div>
+    <img class="portrait" src="{{ '/img/IRCphoto.jpg' | url }}" alt="{{ profile.photo_alt }}" width="499" height="499">
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="band" aria-labelledby="currently">
+    <h2 class="label" id="currently">Currently</h2>
+    <ul class="pairs">
+      {% for item in profile.currently %}
+      <li><strong>{{ item.title }}</strong><span>{{ item.text }}</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  {% if content.posts %}
+  <section class="band" aria-labelledby="recent">
+    <h2 class="label" id="recent">Recent writing</h2>
+    <div>
+      <ul class="pairs">
+        {% for p in content.posts[:3] %}
+        <li><a href="{{ ('/writing/' ~ p.slug ~ '/') | url }}"><span class="t">{{ p.title }}</span><p>{{ p.summary }}</p></a></li>
+        {% endfor %}
+      </ul>
+      <a class="more" href="{{ '/writing/' | url }}">All writing</a>
+    </div>
+  </section>
+  {% endif %}
+
+  {% set themes = content.research | selectattr('id', 'in', profile.selected_work) | list %}
+  {% if themes %}
+  <section class="band" aria-labelledby="selected">
+    <h2 class="label" id="selected">Selected work</h2>
+    <div>
+      <ul class="pairs">
+        {% for t in themes %}
+        <li><a href="{{ ('/research/#' ~ t.id) | url }}"><span class="t">{{ t.title }}</span><p>{{ t.summary }}</p></a></li>
+        {% endfor %}
+      </ul>
+      <a class="more" href="{{ '/research/' | url }}">All research</a>
+    </div>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ '/js/email.js' | url }}" defer></script>{% endblock %}
