@@ -1,0 +1,30 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import related %}
+{% block title %}Research · {{ site.title }}{% endblock %}
+{% block description %}Research themes: automating health monitoring, physics-informed and hybrid models, foundation models for time series, airspace safety, aerospace health management, and distributed diagnosis.{% endblock %}
+{% block content %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>Research</h1>
+    <p>The common thread is model-based thinking: understand how a system is supposed to behave, notice when it stops, and say what happens next. The work below is grouped by theme, newest first, with the public papers and patents behind each.</p>
+  </header>
+  {% for t in content.research %}
+  <section class="theme" id="{{ t.id }}">
+    <div class="theme-meta">{{ t.org }}<br><span class="mono">{{ t.period }}</span></div>
+    <div>
+      <h2>{{ t.title }}</h2>
+      <div class="body">{{ t.body | markdown }}</div>
+      {% if t['items'] %}
+      <div class="related">
+        <span class="label">Related papers and patents</span>
+        <ul>
+          {% for p in t['items'] %}{{ related(p) }}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

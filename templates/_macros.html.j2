@@ -1,0 +1,9 @@
+{% set KIND = {"journal": "journal", "conference": "paper", "patent": "patent", "book": "book",
+               "chapter": "chapter", "report": "report", "thesis": "thesis", "whitepaper": "white paper"} %}
+
+{% macro related(p) -%}
+<li class="rel"><span class="kind">{{ KIND[p.type] }}</span>
+{%- if p.url %}<a href="{{ p.url }}" rel="noopener">{{ p.title }}</a>
+{%- else %}<a href="{{ ('/publications/#pub-' ~ p.key) | url }}">{{ p.title }}</a>{% endif %}
+{%- if p.year %}<span class="muted">, {{ p.year }}</span>{% endif %}</li>
+{%- endmacro %}
