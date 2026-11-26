@@ -77,7 +77,7 @@ def test_site_has_no_forbidden_strings(site):
 
 
 ALLOWED_HOSTS = {"doi.org", "patents.google.com", "scholar.google.com", "www.linkedin.com", "orcid.org",
-                 "phmsociety.org", "www.slb.com", "indranilrc.github.io", "indranilroychoudhury.com"}
+                 "phmsociety.org", "www.slb.com", "a.co", "indranilrc.github.io", "indranilroychoudhury.com"}
 
 
 def test_external_links_use_known_hosts(site):

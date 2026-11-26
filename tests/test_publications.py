@@ -49,3 +49,11 @@ def test_award_tag(page):
 
 def test_book_featured(page):
     assert 'class="book"' in page and "book-cover.png" in page
+
+
+def test_book_details(page):
+    book = re.search(r'<section class="book".*?</section>', page, re.S).group(0)
+    assert "978-1539074830" in book
+    assert "396 pages" in book
+    assert 'href="https://a.co/f6TQn4B"' in book
+    assert "NASA Ames" in book
