@@ -1,4 +1,64 @@
 # Site-only extras for publications, keyed by the CV \bibitem key
 # (e.g. PHM-13-a) or patent number key (e.g. US12608592).
 # Fields: type, url, award, themes. Anything here overrides the CV import.
-{}
+# DOIs below were matched to the CV titles exactly via Crossref and checked on doi.org (2026-11-26).
+
+ACIAAS-2018: {url: "https://doi.org/10.2514/5.9781624104794.0219.0242"}
+AI-14: {url: "https://doi.org/10.1016/j.artint.2014.01.003"}
+AIAA-07: {url: "https://doi.org/10.2514/6.2007-2941"}
+AIAA-11: {url: "https://doi.org/10.2514/6.2011-1518"}
+C1: {url: "https://doi.org/10.1109/qce60285.2024.10427"}
+C11: {url: "https://doi.org/10.2514/6.2017-3429"}
+C12: {url: "https://doi.org/10.36001/phmconf.2016.v8i1.2497"}
+C13: {url: "https://doi.org/10.36001/phmconf.2016.v8i1.2583"}
+C14: {url: "https://doi.org/10.36001/phme.2016.v3i1.1575"}
+C16: {url: "https://doi.org/10.2514/6.2016-4216"}
+C17: {url: "https://doi.org/10.2514/6.2016-2131"}
+C18: {url: "https://doi.org/10.36001/phmconf.2015.v7i1.2548"}
+C19: {url: "https://doi.org/10.36001/phmconf.2015.v7i1.2586"}
+C1new: {url: "https://doi.org/10.36001/phme.2026.v9i1.5055"}
+C2: {url: "https://doi.org/10.36001/phme.2024.v8i1.4118"}
+C27: {url: "https://doi.org/10.36001/phmconf.2013.v5i1.2258"}
+C29: {url: "https://doi.org/10.4271/2013-01-2333"}
+C2new: {url: "https://doi.org/10.2118/229309-ms"}
+C3: {url: "https://doi.org/10.2118/212445-ms"}
+C30: {url: "https://doi.org/10.2514/6.2013-4659"}
+C4: {url: "https://doi.org/10.2118/208760-ms"}
+C5: {url: "https://doi.org/10.2118/204086-ms"}
+C6: {url: "https://doi.org/10.2514/6.2018-5034"}
+C7: {url: "https://doi.org/10.36001/phme.2018.v4i1.559"}
+C8: {url: "https://doi.org/10.2514/6.2017-4388"}
+C9: {url: "https://doi.org/10.2514/6.2017-4494"}
+CDC-09: {url: "https://doi.org/10.1109/cdc.2009.5400689"}
+CEP-15: {url: "https://doi.org/10.1016/j.conengprac.2015.01.007"}
+DIB-18: {url: "https://doi.org/10.1016/j.dib.2018.11.085"}
+DX-10-a: {url: "https://doi.org/10.36001/phmconf.2010.v2i1.1936"}
+DX-10-b: {url: "https://doi.org/10.36001/phmconf.2010.v2i1.1951"}
+ECMS-08: {url: "https://doi.org/10.7148/2008-0471"}
+FDHDCS-2018: {url: "https://doi.org/10.1007/978-3-319-74014-0_8"}
+HSCC-07: {url: "https://doi.org/10.1007/978-3-540-71493-4_60"}
+IEEE-TR-14: {url: "https://doi.org/10.1109/tr.2014.2313791"}
+IEEEAerospace-13-a: {url: "https://doi.org/10.1109/aero.2013.6496976"}
+IEEEAerospace-13-b: {url: "https://doi.org/10.1109/aero.2013.6496975"}
+IEEEAerospace-15: {url: "https://doi.org/10.1109/aero.2015.7119141"}
+IJAMT-18: {url: "https://doi.org/10.1007/s00170-018-2874-0"}
+ITASE-08: {url: "https://doi.org/10.1109/tase.2008.2009094"}
+MED-10: {url: "https://doi.org/10.1109/med.2010.5547832"}
+MethodsX-19: {url: "https://doi.org/10.1016/j.mex.2019.02.015"}
+Neuro-18: {url: "https://doi.org/10.1016/j.neucom.2017.11.062"}
+PHM-10-a: {url: "https://doi.org/10.36001/phmconf.2010.v2i1.1804"}
+PHM-11-a: {url: "https://doi.org/10.36001/phmconf.2011.v3i1.2071"}
+PHM-11-b: {url: "https://doi.org/10.36001/phmconf.2011.v3i1.2037"}
+PHM-11-c: {url: "https://doi.org/10.36001/phmconf.2011.v3i1.2015"}
+PHM-12-a: {url: "https://doi.org/10.36001/phmconf.2012.v4i1.2172"}
+PHM-12-b: {url: "https://doi.org/10.36001/phmconf.2012.v4i1.2112"}
+PHM-13-a: {url: "https://doi.org/10.36001/phmconf.2013.v5i1.2318"}
+PHM-14-a: {url: "https://doi.org/10.36001/phmconf.2014.v6i1.2346"}
+PHM-14-b: {url: "https://doi.org/10.36001/phmconf.2014.v6i1.2375"}
+PHM-14-c: {url: "https://doi.org/10.36001/phmconf.2014.v6i1.2376"}
+PHME-14: {url: "https://doi.org/10.36001/phme.2014.v2i1.1545"}
+SIM-08: {url: "https://doi.org/10.1177/0037549710364478"}
+SMC-08: {url: "https://doi.org/10.1109/tsmca.2010.2052038"}
+SPEJ-24: {url: "https://doi.org/10.2118/212445-pa"}
+Safeprocess-12-a: {url: "https://doi.org/10.3182/20120829-3-mx-2028.00243"}
+Safeprocess-12-b: {url: "https://doi.org/10.3182/20120829-3-mx-2028.00084"}

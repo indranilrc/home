@@ -149,6 +149,7 @@ p { margin: 0 0 1em; }
 .chip[aria-pressed="true"] { color: var(--bg); background: var(--fg); border-color: var(--fg); }
 .search { margin-left: auto; font: 400 0.875rem var(--sans); color: var(--fg); background: transparent; border: 1px solid var(--rule); border-radius: 4px; padding: 0.45rem 0.7rem; width: 14rem; max-width: 100%; }
 .search::placeholder { color: var(--faint); }
+.year[hidden], .pub[hidden], .empty[hidden] { display: none; }
 .year { display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: 1.5rem; padding: 1.25rem 0; border-top: 1px solid var(--rule); }
 .year h2 { font: 400 0.9rem/1.6 var(--mono); color: var(--faint); }
 .year ol { list-style: none; margin: 0; padding: 0; }
@@ -156,7 +157,7 @@ p { margin: 0 0 1em; }
 .pub strong { font-weight: 500; color: var(--fg); }
 .pub em { color: var(--fg); font-style: italic; }
 .pub .kind { font-family: var(--mono); font-size: 0.7rem; color: var(--faint); margin-right: 0.45rem; }
-.tag { display: inline-block; font-size: 0.72rem; color: var(--accent); border: 1px solid currentColor; border-radius: 3px; padding: 0 0.35rem; margin-left: 0.35rem; line-height: 1.5; white-space: nowrap; }
+.tag { display: inline-block; font-size: 0.72rem; color: var(--accent); border: 1px solid currentColor; border-radius: 3px; padding: 0 0.35rem; margin-left: 0.35rem; line-height: 1.5; }
 .pub-link { margin-left: 0.35rem; font-size: 0.8rem; }
 .empty { color: var(--faint); padding: 1rem 0; }
 

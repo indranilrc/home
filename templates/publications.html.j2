@@ -1,0 +1,57 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import KIND %}
+{% block title %}Publications · {{ site.title }}{% endblock %}
+{% block description %}Books, journal and conference papers, technical reports, and patents by Indranil Roychoudhury.{% endblock %}
+{% block content %}
+{% set book = content.pubs_by_key.get('PROG-Book') %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>Publications</h1>
+    <p>Papers, reports, and patents, newest first. An up-to-date list with links is also on <a href="{{ (profile.links | selectattr('label', 'equalto', 'Google Scholar') | first).url }}" rel="noopener">Google Scholar</a>.</p>
+  </header>
+
+  {% if book %}
+  <section class="book" aria-label="Book">
+    <img src="{{ '/img/book-cover.png' | url }}" alt="Cover of Prognostics: The Science of Making Predictions" width="88">
+    <div>
+      <h2>{{ book.title }}</h2>
+      <p>With K. Goebel, M. Daigle, A. Saxena, S. Sankararaman, and J. Celaya, {{ book.year }}.</p>
+    </div>
+  </section>
+  {% endif %}
+
+  <div class="filters" role="group" aria-label="Filter publications" hidden>
+    <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+    <button class="chip" type="button" data-filter="journal" aria-pressed="false">Journal</button>
+    <button class="chip" type="button" data-filter="conference" aria-pressed="false">Conference</button>
+    <button class="chip" type="button" data-filter="book,chapter" aria-pressed="false">Book &amp; chapter</button>
+    <button class="chip" type="button" data-filter="patent" aria-pressed="false">Patent</button>
+    <button class="chip" type="button" data-filter="report,whitepaper,thesis" aria-pressed="false">Report</button>
+    <input class="search" type="search" placeholder="Search titles, venues, authors" aria-label="Search publications">
+  </div>
+
+  {% set dated = content.pubs | selectattr('year') | sort(attribute='year', reverse=True) | groupby('year') | sort(attribute='grouper', reverse=True) %}
+  {% set undated = content.pubs | rejectattr('year') | list %}
+  {% for group in dated %}
+  <section class="year" aria-labelledby="y-{{ group.grouper }}">
+    <h2 id="y-{{ group.grouper }}">{{ group.grouper }}</h2>
+    <ol>
+      {% for p in group.list %}{{ pub(p) }}{% endfor %}
+    </ol>
+  </section>
+  {% endfor %}
+  {% if undated %}
+  <section class="year" aria-labelledby="y-undated">
+    <h2 id="y-undated">Undated</h2>
+    <ol>{% for p in undated %}{{ pub(p) }}{% endfor %}</ol>
+  </section>
+  {% endif %}
+  <p class="empty" hidden>No matches.</p>
+</div>
+{% endblock %}
+{% macro pub(p) -%}
+<li class="pub" id="pub-{{ p.key }}" data-type="{{ p.type }}" data-search="{{ p.text | lower }}"><span class="kind">{{ KIND[p.type] }}</span>{{ p.html | safe }}
+{%- if p.award %} <span class="tag">{{ p.award }}</span>{% endif %}
+{%- if p.url and p.url not in p.html %} <a class="pub-link" href="{{ p.url }}" rel="noopener">Link</a>{% endif %}</li>
+{%- endmacro %}
+{% block scripts %}<script src="{{ '/js/pubs.js' | url }}" defer></script>{% endblock %}
