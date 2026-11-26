@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+{% block title %}Writing · {{ site.title }}{% endblock %}
+{% block description %}Notes and articles by {{ site.title }}.{% endblock %}
+{% block head_extra %}<link rel="alternate" type="application/atom+xml" title="Writing" href="{{ '/writing/feed.xml' | url }}">{% endblock %}
+{% block content %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>Writing</h1>
+    <p>Notes on diagnostics, prognostics, and machine learning for physical systems. <a href="{{ '/writing/feed.xml' | url }}">Feed</a></p>
+  </header>
+  <ul class="post-list">
+    {% for p in content.posts %}
+    <li>
+      <time datetime="{{ p.date.isoformat() }}">{{ p.date.strftime('%B') }} {{ p.date.day }}, {{ p.date.year }}</time>
+      <h2><a href="{{ ('/writing/' ~ p.slug ~ '/') | url }}">{{ p.title }}</a></h2>
+      {% if p.summary %}<p>{{ p.summary }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

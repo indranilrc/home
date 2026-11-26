@@ -42,6 +42,20 @@
     </ul>
   </section>
 
+  {% if content.posts %}
+  <section class="band" aria-labelledby="recent">
+    <h2 class="label" id="recent">Recent writing</h2>
+    <div>
+      <ul class="pairs">
+        {% for p in content.posts[:3] %}
+        <li><a href="{{ ('/writing/' ~ p.slug ~ '/') | url }}"><span class="t">{{ p.title }}</span><p>{{ p.summary }}</p></a></li>
+        {% endfor %}
+      </ul>
+      <a class="more" href="{{ '/writing/' | url }}">All writing</a>
+    </div>
+  </section>
+  {% endif %}
+
   {% set themes = content.research | selectattr('id', 'in', profile.selected_work) | list %}
   {% if themes %}
   <section class="band" aria-labelledby="selected">

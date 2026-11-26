@@ -9,6 +9,7 @@ from pathlib import Path
 
 from sitegen.data import load_content
 from sitegen.render import copy_static, make_env, write
+from sitegen.writing import atom_feed
 
 ROOT = Path(__file__).resolve().parent
 
@@ -29,7 +30,7 @@ def build_site(out_dir: Path, include_drafts: bool = False, root: Path = ROOT) -
     if out_dir.exists():
         shutil.rmtree(out_dir)
     out_dir.mkdir(parents=True)
-    content = load_content(root)
+    content = load_content(root, include_drafts=include_drafts)
     for w in content.warnings:
         print("warning:", w, file=sys.stderr)
     env = make_env(root / "templates", content.site)
@@ -39,6 +40,13 @@ def build_site(out_dir: Path, include_drafts: bool = False, root: Path = ROOT) -
     ctx = {"content": content, "profile": content.profile, "nav": nav, "build_date": dt.date.today()}
     for rel, tpl, pid in PAGES:
         write(out_dir, rel, env.get_template(tpl).render(page_id=pid, **ctx))
+    if content.posts:
+        write(out_dir, "writing/index.html",
+              env.get_template("writing_index.html.j2").render(page_id="writing", **ctx))
+        for post in content.posts:
+            write(out_dir, f"writing/{post['slug']}/index.html",
+                  env.get_template("post.html.j2").render(page_id="writing", post=post, **ctx))
+        write(out_dir, "writing/feed.xml", atom_feed(content.posts, content.site))
     copy_static(root / "static", out_dir)
 
 

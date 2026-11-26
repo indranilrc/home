@@ -101,7 +101,7 @@ def _resolve_research(research: list[dict], by_key: dict) -> None:
         theme["items"] = items
 
 
-def load_content(root: Path) -> Content:
+def load_content(root: Path, include_drafts: bool = False) -> Content:
     c = Path(root) / "content"
     warnings: list[str] = []
     pubs = json.loads((c / "generated" / "publications.json").read_text(encoding="utf-8"))
@@ -111,6 +111,9 @@ def load_content(root: Path) -> Content:
     by_key = {p["key"]: p for p in pubs}
     research = copy.deepcopy(_yaml(c / "research.yml", []))
     _resolve_research(research, by_key)
+    from sitegen.writing import load_posts  # local import: writing depends on data
+
+    posts = load_posts(c / "writing", include_drafts)
     return Content(
         site=_yaml(c / "site.yml", {}),
         profile=_yaml(c / "profile.yml", {}),
@@ -118,5 +121,6 @@ def load_content(root: Path) -> Content:
         pubs=pubs,
         pubs_by_key=by_key,
         cv=cv,
+        posts=posts,
         warnings=warnings,
     )
