@@ -159,6 +159,7 @@ main p, main li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; hyp
 .book img { width: 5.5rem; box-shadow: 0 0 0 1px var(--rule); }
 .book h2 { font-size: 1.1rem; font-weight: 600; font-style: italic; }
 .book p { font-size: 0.92rem; color: var(--muted); margin: 0.35rem 0 0; }
+.book .book-authors strong { font-weight: 500; color: var(--fg); }
 .book .book-meta { font-size: 0.82rem; color: var(--faint); text-align: left; }
 .filters { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; padding: 1rem 0; border-top: 1px solid var(--rule); position: sticky; top: 0; background: var(--bg); z-index: 2; }
 .filters[hidden] { display: none; }

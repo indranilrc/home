@@ -57,3 +57,5 @@ def test_book_details(page):
     assert "396 pages" in book
     assert 'href="https://a.co/f6TQn4B"' in book
     assert "NASA Ames" in book
+    assert "K. Goebel, M. Daigle, A. Saxena, S. Sankararaman, <strong>I. Roychoudhury</strong>, and J. Celaya" in book
+    assert "With " not in book
