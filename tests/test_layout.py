@@ -93,3 +93,11 @@ def test_toggle_uses_sun_and_moon_icons(site):
     assert ".theme-toggle .icon-moon { display: none; }" in css
     assert ':root[data-theme="light"] .theme-toggle .icon-moon { display: block; }' in css
     assert ':root[data-theme="light"] .theme-toggle .icon-sun { display: none; }' in css
+
+
+def test_body_text_justified():
+    css = (ROOT / "static" / "css" / "site.css").read_text()
+    rule = css[css.index("main p, main li {"):]
+    rule = rule[: rule.index("}")]
+    assert "text-align: justify" in rule and "hyphens: auto" in rule
+    assert ".elsewhere, .cv-actions, .more, .empty, .job-role { text-align: left; }" in css

@@ -62,6 +62,10 @@ p { margin: 0 0 1em; }
 .muted { color: var(--muted); }
 .mono { font-family: var(--mono); }
 
+/* Body text is justified, with hyphenation to keep word gaps even. */
+main p, main li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; hyphenate-limit-chars: 7 3 3; }
+.elsewhere, .cv-actions, .more, .empty, .job-role { text-align: left; }
+
 /* ---------------------------------------------------------------- header */
 .site-header { border-bottom: 1px solid var(--rule); }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4rem; }
