@@ -5,6 +5,8 @@ import shutil
 from pathlib import Path
 
 import jinja2
+import markdown as md
+from markupsafe import Markup
 
 
 def make_env(templates_dir: Path, site: dict) -> jinja2.Environment:
@@ -18,6 +20,9 @@ def make_env(templates_dir: Path, site: dict) -> jinja2.Environment:
     env.globals["base"] = base
     env.globals["site"] = site
     env.filters["url"] = lambda path: base + path
+    env.filters["markdown"] = render_markdown
+    env.filters["inline_markdown"] = lambda text: Markup(
+        render_markdown(text).removeprefix("<p>").removesuffix("</p>"))
     return env
 
 
@@ -34,3 +39,8 @@ def write(out_dir: Path, rel: str, text: str) -> None:
     path = out_dir / rel
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
+
+
+def render_markdown(text: str) -> Markup:
+    return Markup(md.markdown(text or "", extensions=["extra", "smarty"],
+                              extension_configs={"smarty": {"smart_dashes": False}}))
