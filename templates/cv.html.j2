@@ -1,0 +1,53 @@
+{% extends "base.html.j2" %}
+{% block title %}CV · {{ site.title }}{% endblock %}
+{% block description %}Experience, education, honors, service, talks, and teaching of Indranil Roychoudhury.{% endblock %}
+{% macro items(list) -%}
+<ul class="cv-list">
+  {% for it in list %}
+  <li>{{ it.html | safe }}{% if it.children %}<ul>{% for c in it.children %}<li>{{ c.html | safe }}</li>{% endfor %}</ul>{% endif %}</li>
+  {% endfor %}
+</ul>
+{%- endmacro %}
+{% macro section(title, sec) -%}
+{% if sec and sec.groups %}
+<section class="cv-section">
+  <h2>{{ title }}</h2>
+  <div>
+    {% for g in sec.groups %}
+    {% if g.title %}<h3>{{ g.title | replace('Reviewing Activities: ', 'Reviewing: ') }}</h3>{% endif %}
+    {{ items(g['items']) }}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{%- endmacro %}
+{% block content %}
+{% set cv = content.cv %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>CV</h1>
+    <p>A short version of my CV. The full version, with every paper, patent, and service role, is available as a PDF.</p>
+    <p class="cv-actions"><a href="{{ '/IndranilRoychoudhury_CV.pdf' | url }}">Download the full CV (PDF)</a></p>
+  </header>
+
+  <section class="cv-section">
+    <h2>Experience</h2>
+    <div>
+      {% for job in cv.experience %}
+      <article class="job">
+        <div class="job-head"><h3>{{ job.org }}</h3><span class="job-dates">{{ job.dates }}</span></div>
+        <p class="job-role">{{ job.role }} <span class="job-org">· {{ job.location }}</span></p>
+        <ul>{% for b in job.bullets %}<li>{{ b | safe }}</li>{% endfor %}</ul>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  {{ section("Education", cv.education) }}
+  {{ section("Honors and awards", cv.honors) }}
+  {{ section("Professional service", cv.service) }}
+  {{ section("Talks and tutorials", cv.talks) }}
+  {{ section("Teaching", cv.teaching) }}
+  {{ section("Memberships", cv.memberships) }}
+</div>
+{% endblock %}

@@ -19,6 +19,7 @@ PAGES = [
     ("index.html", "home.html.j2", "home"),
     ("research/index.html", "research.html.j2", "research"),
     ("publications/index.html", "publications.html.j2", "publications"),
+    ("cv/index.html", "cv.html.j2", "cv"),
     ("404.html", "404.html.j2", "404"),
 ]
 

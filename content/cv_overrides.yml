@@ -3,6 +3,59 @@
 #   experience:  KEY: {bullets: [...]}  or  {hide: true}
 #   honors|service|talks|teaching|memberships|education:  KEY: {html: "..."}  or  {hide: true}
 
+experience:
+  slb-software-technology-innovation-center-october-2018-present:
+    bullets:
+      - Lead research on prognostics and health management and scientific machine learning across well construction, production, artificial lift, and new energy, taking ideas from research through prototypes and, in one case, into a commercial product.
+      - Started and lead AutoPHM, a framework that automates building and checking health monitoring so domain engineers can deploy it without a specialist.
+      - Developed physics-informed and hybrid models for drilling, including real-time gamma-ray log generation and stick/slip prediction, and a general framework for hybrid modeling of physical systems.
+      - Work on time series foundation models for production assets, and mentor colleagues through SLB's technical career process.
+  sgt-december-2010-september-2018:
+    bullets:
+      - Led the Health Management for Aerospace Systems task, setting its technical direction and leading a team of six researchers and engineers.
+      - Co-developed and co-led the Real-Time Safety Monitoring framework, which predicts safety margins in the National Airspace System from live flight data.
+      - Developed diagnosis and prognosis methods for spacecraft power systems, a water recycling system, batteries on electric aircraft and rovers, and propellant loading systems.
+      - Contributed to the NASA Systems Engineering Handbook on fault management and to SAE ARP6883, guidelines for writing IVHM requirements.
+  sgt-august-2009-december-2010:
+    bullets:
+      - Helped build the FLEA test stand, which tests fault detection and prognosis for electromechanical actuators in flight.
+      - Developed the health management software that ran on the stand during its test flights.
+  vanderbilt-university-august-2004-july-2009:
+    bullets:
+      - Developed methods for distributed fault diagnosis of complex physical systems, the subject of my dissertation.
+      - Combined qualitative diagnosis with dynamic Bayesian networks to diagnose both abrupt and gradual faults.
+      - Built modeling and simulation tools for hybrid bond graphs, used for NASA water recovery and spacecraft power testbeds.
+  mission-critical-technologies-summer-2007:
+    bullets:
+      - Built high-fidelity hybrid models and the Virtual ADAPT simulator for NASA's ADAPT power testbed.
+      - Ran diagnosis experiments on ADAPT using the FACT software.
+  mission-critical-technologies-summer-2006:
+    bullets:
+      - Developed component-based hybrid models for the ADAPT testbed.
+      - Wrote software to build and run hybrid bond graphs as MATLAB Simulink models.
+
+education:
+  ph-d-computer-science-vanderbilt-university-nashville-te:
+    html: "<strong>Ph.D. Computer Science</strong>, Vanderbilt University, 2009. Dissertation: <em>Distributed Diagnosis of Continuous Systems: Global Diagnosis Through Local Analysis</em>"
+  m-s-computer-science-vanderbilt-university-nashville-ten:
+    html: "<strong>M.S. Computer Science</strong>, Vanderbilt University, 2006"
+  b-e-hons-electrical-and-electronics-engineering-bits-pi:
+    html: "<strong>B.E. (Hons.) Electrical and Electronics Engineering</strong>, BITS Pilani, 2004"
+
+honors:
+  fellow-the-prognostics-and-health-management-society-class:
+    html: '<strong><a href="https://phmsociety.org/phm-society-awards/bios-of-phm-society-fellows/" rel="noopener">Fellow, Prognostics and Health Management Society, 2023</a></strong>'
+  performed-by-slb-bronze-award-november-2022-for-leadersh:
+    html: "<strong>Performed by SLB Bronze Award</strong>, 2022, for leading the scientific hybrid modeling theme"
+  finalist-slb-fizz-digital-innovation-forum-with-j-prost:
+    html: "<strong>Finalist, SLB Fizz Digital Innovation Forum</strong>, 2021, with J. Prost, for a company-wide prognostics and health management platform"
+
 service:
   # SLB-internal community role; not meaningful to outside readers.
   phm-special-interest-group-leader-elected-slb-eureka-comm: {hide: true}
+
+teaching:
+  advanced-time-series-analysis-slb-next-ai-academy-2025:
+    html: "<strong>Advanced Time Series Analysis</strong>, SLB NExT AI Academy, 2025–present. Redesigned and teach the final course in the academy's data science track, covering decomposition, forecasting, anomaly detection, and time series foundation models."
+  invited-tutorials-annual-conference-of-the-phm-society-2016:
+    html: "<strong>Invited tutorials</strong>, Annual Conference of the PHM Society, 2016, 2017, 2019, and 2025, on model-based diagnostics, model-based prognostics, PHM in the cloud, and hybrid modeling."
