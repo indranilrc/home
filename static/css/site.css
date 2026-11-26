@@ -64,7 +64,14 @@ p { margin: 0 0 1em; }
 
 /* Body text is justified, with hyphenation to keep word gaps even. */
 main p, main li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; hyphenate-limit-chars: 7 3 3; }
-.elsewhere, .cv-actions, .more, .empty, .job-role { text-align: left; }
+.elsewhere, .cv-actions, .more, .empty, .job-role, .related li { text-align: left; }
+
+/* Numbered lists: quiet monospace numbers in the left gutter. */
+.cv-list, .job ol, .related ol, .year ol { list-style: decimal; padding-left: 2.1rem; margin: 0; }
+.cv-list ol { list-style: lower-alpha; padding-left: 1.6rem; margin: 0.3rem 0 0; }
+.cv-list li::marker, .job li::marker, .related li::marker, .pub::marker {
+  font: 400 0.75rem var(--mono); color: var(--faint);
+}
 
 /* ---------------------------------------------------------------- header */
 .site-header { border-bottom: 1px solid var(--rule); }
@@ -137,7 +144,7 @@ main p, main li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; hyp
 .theme .body { max-width: var(--measure); color: var(--muted); }
 .related { margin-top: 1.25rem; }
 .related .label { display: block; margin-bottom: 0.5rem; }
-.related ul { list-style: none; margin: 0; padding: 0; }
+
 .related li { font-size: 0.88rem; line-height: 1.5; padding: 0.3rem 0; color: var(--muted); }
 .related li .kind { font-family: var(--mono); font-size: 0.72rem; color: var(--faint); margin-right: 0.5rem; text-transform: lowercase; }
 
@@ -156,7 +163,7 @@ main p, main li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; hyp
 .year[hidden], .pub[hidden], .empty[hidden] { display: none; }
 .year { display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: 1.5rem; padding: 1.25rem 0; border-top: 1px solid var(--rule); }
 .year h2 { font: 400 0.9rem/1.6 var(--mono); color: var(--faint); }
-.year ol { list-style: none; margin: 0; padding: 0; }
+
 .pub { font-size: 0.92rem; line-height: 1.55; color: var(--muted); padding: 0.35rem 0 0.6rem; }
 .pub strong { font-weight: 500; color: var(--fg); }
 .pub em { color: var(--fg); font-style: italic; }
@@ -171,10 +178,10 @@ main p, main li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; hyp
 .cv-section > h2 { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); font-weight: 500; padding-top: 0.25rem; line-height: 1.6; }
 .cv-section h3 { font-size: 0.95rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
 .cv-section h3:first-child { margin-top: 0; }
-.cv-list { list-style: none; margin: 0; padding: 0; }
+
 .cv-list li { font-size: 0.92rem; line-height: 1.55; color: var(--muted); padding: 0.3rem 0; }
 .cv-list li strong { color: var(--fg); font-weight: 500; }
-.cv-list ul { margin: 0.3rem 0 0; padding-left: 1rem; }
+
 .job { padding-bottom: 1.5rem; }
 .job:last-child { padding-bottom: 0; }
 .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; }
@@ -182,9 +189,8 @@ main p, main li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; hyp
 .job-dates { font: 400 0.8rem/1.9 var(--mono); color: var(--faint); }
 .job-role { font-size: 0.92rem; color: var(--fg); margin: 0.1rem 0 0.4rem; }
 .job-org { font-size: 0.85rem; color: var(--faint); }
-.job ul { margin: 0.4rem 0 0; padding-left: 1.1rem; color: var(--muted); font-size: 0.92rem; }
+.job ol { margin: 0.4rem 0 0; color: var(--muted); font-size: 0.92rem; }
 .job li { padding: 0.15rem 0; }
-.job li::marker { color: var(--faint); }
 
 /* --------------------------------------------------------------- writing */
 .post-list { list-style: none; margin: 0; padding: 0; }

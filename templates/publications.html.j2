@@ -32,25 +32,26 @@
 
   {% set dated = content.pubs | selectattr('year') | sort(attribute='year', reverse=True) | groupby('year') | sort(attribute='grouper', reverse=True) %}
   {% set undated = content.pubs | rejectattr('year') | list %}
+  {% set ns = namespace(n=content.pubs | length) %}
   {% for group in dated %}
   <section class="year" aria-labelledby="y-{{ group.grouper }}">
     <h2 id="y-{{ group.grouper }}">{{ group.grouper }}</h2>
     <ol>
-      {% for p in group.list %}{{ pub(p) }}{% endfor %}
+      {% for p in group.list %}{{ pub(p, ns.n) }}{% set ns.n = ns.n - 1 %}{% endfor %}
     </ol>
   </section>
   {% endfor %}
   {% if undated %}
   <section class="year" aria-labelledby="y-undated">
     <h2 id="y-undated">Undated</h2>
-    <ol>{% for p in undated %}{{ pub(p) }}{% endfor %}</ol>
+    <ol>{% for p in undated %}{{ pub(p, ns.n) }}{% set ns.n = ns.n - 1 %}{% endfor %}</ol>
   </section>
   {% endif %}
   <p class="empty" hidden>No matches.</p>
 </div>
 {% endblock %}
-{% macro pub(p) -%}
-<li class="pub" id="pub-{{ p.key }}" data-type="{{ p.type }}" data-search="{{ p.text | lower }}"><span class="kind">{{ KIND[p.type] }}</span>{{ p.html | safe }}
+{% macro pub(p, n) -%}
+<li class="pub" id="pub-{{ p.key }}" value="{{ n }}" data-type="{{ p.type }}" data-search="{{ p.text | lower }}"><span class="kind">{{ KIND[p.type] }}</span>{{ p.html | safe }}
 {%- if p.award %} <span class="tag">{{ p.award }}</span>{% endif %}
 {%- if p.url and p.url not in p.html %} <a class="pub-link" href="{{ p.url }}" rel="noopener">Link</a>{% endif %}</li>
 {%- endmacro %}

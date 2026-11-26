@@ -114,7 +114,7 @@ Articles are Markdown files in `content/writing/` with front matter (`title`, `d
 - **Dark mode:** charcoal `#14171a`, text `#e8e6e1`, muted `#b4b0a7`, rules `#2a2e33`, accent amber `#d9a441`.
 - **Dark is the default for every visitor** (revised 2026-11-26 at Indranil's request), regardless of system setting. A round icon button toggles light/dark (the icon shows the mode a click switches to: sun in dark mode, moon in light mode; tooltip and aria-label say what a click does); the choice is remembered in `localStorage`, and a small inline script in `<head>` applies it before paint (no flash).
 - **Type:** IBM Plex Sans (headings and body) and IBM Plex Mono (small UI details only, such as the toggle and dates). Self-host the WOFF2 files (no Google Fonts request) with `font-display: swap`.
-- Body text (paragraphs and list items) is justified with automatic hyphenation (revised 2026-11-26 at Indranil's request); headings, navigation, dates, and short link rows stay left-aligned.
+- Body text (paragraphs and list items) is justified with automatic hyphenation (revised 2026-11-26 at Indranil's request); headings, navigation, dates, short link rows, and research related-paper titles stay left-aligned. Record lists are numbered: publications continuously from newest (highest) to oldest (1), other lists per group.
 - Headline sizes are large and tight (H1 around 44px desktop, letter-spacing about -0.028em); body 16 to 17px, line-height about 1.6, measure about 65 characters.
 - Small uppercase tracked labels for section headers ("CURRENTLY").
 - Links are underlined with a thin rule that takes the accent color on hover.

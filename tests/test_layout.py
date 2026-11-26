@@ -100,4 +100,4 @@ def test_body_text_justified():
     rule = css[css.index("main p, main li {"):]
     rule = rule[: rule.index("}")]
     assert "text-align: justify" in rule and "hyphens: auto" in rule
-    assert ".elsewhere, .cv-actions, .more, .empty, .job-role { text-align: left; }" in css
+    assert ".elsewhere, .cv-actions, .more, .empty, .job-role, .related li { text-align: left; }" in css

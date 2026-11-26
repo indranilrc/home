@@ -2,11 +2,11 @@
 {% block title %}CV · {{ site.title }}{% endblock %}
 {% block description %}Experience, education, honors, service, talks, and teaching of Indranil Roychoudhury.{% endblock %}
 {% macro items(list) -%}
-<ul class="cv-list">
+<ol class="cv-list">
   {% for it in list %}
-  <li>{{ it.html | safe }}{% if it.children %}<ul>{% for c in it.children %}<li>{{ c.html | safe }}</li>{% endfor %}</ul>{% endif %}</li>
+  <li>{{ it.html | safe }}{% if it.children %}<ol>{% for c in it.children %}<li>{{ c.html | safe }}</li>{% endfor %}</ol>{% endif %}</li>
   {% endfor %}
-</ul>
+</ol>
 {%- endmacro %}
 {% macro section(title, sec) -%}
 {% if sec and sec.groups %}
@@ -37,7 +37,7 @@
       <article class="job">
         <div class="job-head"><h3>{{ job.org }}</h3><span class="job-dates">{{ job.dates }}</span></div>
         <p class="job-role">{{ job.role }} <span class="job-org">· {{ job.location }}</span></p>
-        <ul>{% for b in job.bullets %}<li>{{ b | safe }}</li>{% endfor %}</ul>
+        <ol>{% for b in job.bullets %}<li>{{ b | safe }}</li>{% endfor %}</ol>
       </article>
       {% endfor %}
     </div>

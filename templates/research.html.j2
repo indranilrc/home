@@ -17,10 +17,10 @@
       {% if t['items'] %}
       <div class="related">
         <span class="label">Related papers and patents</span>
-        <ul>
+        <ol>
           {% for p in t['items'] %}{{ related(p) }}
           {% endfor %}
-        </ul>
+        </ol>
       </div>
       {% endif %}
     </div>

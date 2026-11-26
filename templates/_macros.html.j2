@@ -10,11 +10,11 @@
 
 
 {% macro item_list(list) -%}
-<ul class="cv-list">
+<ol class="cv-list">
   {% for it in list %}
-  <li>{{ it.html | safe }}{% if it.children %}<ul>{% for c in it.children %}<li>{{ c.html | safe }}</li>{% endfor %}</ul>{% endif %}</li>
+  <li>{{ it.html | safe }}{% if it.children %}<ol>{% for c in it.children %}<li>{{ c.html | safe }}</li>{% endfor %}</ol>{% endif %}</li>
   {% endfor %}
-</ul>
+</ol>
 {%- endmacro %}
 
 {% macro group_sections(groups, default_title="") -%}
