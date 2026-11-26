@@ -3,12 +3,12 @@
   var btn = document.querySelector(".theme-toggle");
   if (!btn) return;
   function current() {
-    return root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    return root.dataset.theme || "dark";
   }
   function paint() {
-    var dark = current() === "dark";
-    btn.textContent = dark ? "● dark" : "○ light";
-    btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    var label = current() === "dark" ? "Switch to light mode" : "Switch to dark mode";
+    btn.setAttribute("aria-label", label);
+    btn.title = label;
   }
   btn.hidden = false;
   btn.addEventListener("click", function () {

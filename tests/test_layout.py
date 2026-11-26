@@ -60,10 +60,31 @@ def test_css_has_mobile_breakpoint():
     css = (ROOT / "static" / "css" / "site.css").read_text()
     assert "max-width: 640px" in css
     assert "prefers-reduced-motion" in css
-    assert "prefers-color-scheme: dark" in css
+    assert "prefers-color-scheme" not in css  # dark is the default regardless of system setting
 
 
 def test_footer_has_build_date(site):
     html = (site / "index.html").read_text()
     today = dt.date.today()
     assert f"Last updated {today:%B} {today.day}, {today.year}" in html
+
+
+def test_dark_is_default(site):
+    html = (site / "index.html").read_text()
+    assert '<html lang="en" data-theme="dark">' in html
+    css = (site / "css" / "site.css").read_text()
+    root = css[css.index(":root {"):]
+    root = root[: root.index("}")]
+    assert "--bg: #14171a" in root
+    light = css[css.index(':root[data-theme="light"]'):]
+    assert "--bg: #ffffff" in light[: light.index("}")]
+
+
+def test_toggle_uses_sun_and_moon_icons(site):
+    html = (site / "index.html").read_text()
+    btn = re.search(r'<button class="theme-toggle".*?</button>', html, re.S).group(0)
+    assert 'class="icon-sun"' in btn and 'class="icon-moon"' in btn
+    assert 'aria-label="Switch to light mode"' in btn
+    assert "light</" not in btn and "dark</" not in btn  # no text label
+    js = (site / "js" / "theme.js").read_text()
+    assert '|| "dark"' in js
