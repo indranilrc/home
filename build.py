@@ -22,7 +22,8 @@ NAV = [
     ("Talks & Teaching", "/talks/", "talks"),
     ("Service", "/service/", "service"),
     ("Awards", "/awards/", "awards"),
-    ("CV", "/cv/", "cv"),
+    ("Experience", "/experience/", "experience"),
+    ("CV", "/IndranilRoychoudhury_CV.pdf", "cv-pdf"),
 ]
 
 # (output path, template, page id)
@@ -33,7 +34,7 @@ PAGES = [
     ("talks/index.html", "talks.html.j2", "talks"),
     ("service/index.html", "service.html.j2", "service"),
     ("awards/index.html", "awards.html.j2", "awards"),
-    ("cv/index.html", "cv.html.j2", "cv"),
+    ("experience/index.html", "experience.html.j2", "experience"),
     ("404.html", "404.html.j2", "404"),
 ]
 

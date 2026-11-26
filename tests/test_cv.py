@@ -11,7 +11,7 @@ from sitegen.data import load_content
 def page(tmp_path_factory) -> str:
     out = tmp_path_factory.mktemp("site")
     build_site(out)
-    return (out / "cv" / "index.html").read_text()
+    return (out / "experience" / "index.html").read_text()
 
 
 def text(html: str) -> str:

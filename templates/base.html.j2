@@ -31,7 +31,11 @@
     <a class="site-name" href="{{ '/' | url }}"{% if page_id == 'home' %} aria-current="page"{% endif %}>{{ site.title }}</a>
     <nav class="site-nav" aria-label="Main">
       {% for label, path, pid in nav %}
+      {% if path.endswith('.pdf') %}
+      <a href="{{ path | url }}" target="_blank" rel="noopener" title="Full CV (PDF, opens in a new tab)">{{ label }}<span class="ext" aria-hidden="true">&#8599;</span></a>
+      {% else %}
       <a href="{{ path | url }}"{% if page_id == pid %} aria-current="page"{% endif %}>{{ label }}</a>
+      {% endif %}
       {% endfor %}
       <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" hidden>
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>

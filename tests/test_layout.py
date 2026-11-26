@@ -23,8 +23,9 @@ def test_theme_script_before_css(site):
 def test_nav_without_posts(site):
     html = (site / "index.html").read_text()
     nav = re.search(r"<nav.*?</nav>", html, re.S).group(0)
-    for label in ("Research", "Publications", "CV"):
+    for label in ("Research", "Publications", "Experience"):
         assert f">{label}</a>" in nav
+    assert ">CV<" in nav
     assert "Writing" not in nav
     assert f'href="{BASE}/research/"' in nav
 

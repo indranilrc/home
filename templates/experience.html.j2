@@ -1,12 +1,12 @@
 {% extends "base.html.j2" %}
-{% block title %}CV · {{ site.title }}{% endblock %}
-{% block description %}Experience, education, honors, service, talks, and teaching of Indranil Roychoudhury.{% endblock %}
+{% block title %}Experience · {{ site.title }}{% endblock %}
+{% block description %}Work history, education, and professional memberships of Indranil Roychoudhury: SLB, NASA Ames Research Center, and Vanderbilt University.{% endblock %}
 {% macro items(list) -%}
-<ol class="cv-list">
+<ul class="cv-list plain">
   {% for it in list %}
-  <li>{{ it.html | safe }}{% if it.children %}<ol>{% for c in it.children %}<li>{{ c.html | safe }}</li>{% endfor %}</ol>{% endif %}</li>
+  <li>{{ it.html | safe }}{% if it.children %}<ul>{% for c in it.children %}<li>{{ c.html | safe }}</li>{% endfor %}</ul>{% endif %}</li>
   {% endfor %}
-</ol>
+</ul>
 {%- endmacro %}
 {% macro section(title, sec) -%}
 {% if sec and sec.groups %}
@@ -25,19 +25,19 @@
 {% set cv = content.cv %}
 <div class="wrap">
   <header class="page-head">
-    <h1>CV</h1>
-    <p>A short version of my CV. <a href="{{ '/awards/' | url }}">Awards</a>, <a href="{{ '/service/' | url }}">service</a>, and <a href="{{ '/talks/' | url }}">talks and teaching</a> have their own pages. The full version, with everything in one place, is available as a PDF.</p>
+    <h1>Experience</h1>
+    <p>Where I have worked and studied. <a href="{{ '/awards/' | url }}">Awards</a>, <a href="{{ '/service/' | url }}">service</a>, and <a href="{{ '/talks/' | url }}">talks and teaching</a> have their own pages, and everything is collected in the full CV.</p>
     <p class="cv-actions"><a href="{{ '/IndranilRoychoudhury_CV.pdf' | url }}">Download the full CV (PDF)</a></p>
   </header>
 
   <section class="cv-section">
-    <h2>Experience</h2>
+    <h2>Work</h2>
     <div>
       {% for job in cv.experience %}
       <article class="job">
         <div class="job-head"><h3>{{ job.org }}</h3><span class="job-dates">{{ job.dates }}</span></div>
         <p class="job-role">{{ job.role }} <span class="job-org">· {{ job.location }}</span></p>
-        <ol>{% for b in job.bullets %}<li>{{ b | safe }}</li>{% endfor %}</ol>
+        <ul>{% for b in job.bullets %}<li>{{ b | safe }}</li>{% endfor %}</ul>
       </article>
       {% endfor %}
     </div>

@@ -8,7 +8,8 @@ from build import build_site
 from tests.siteconf import BASE, URL
 
 NAV = [("Research", "/research/"), ("Publications", "/publications/"), ("Talks &amp; Teaching", "/talks/"),
-       ("Service", "/service/"), ("Awards", "/awards/"), ("CV", "/cv/")]
+       ("Service", "/service/"), ("Awards", "/awards/"), ("Experience", "/experience/"),
+       ("CV", "/IndranilRoychoudhury_CV.pdf")]
 
 
 @pytest.fixture(scope="module")
@@ -24,8 +25,10 @@ def text(html: str) -> str:
 
 def test_nav_has_six_items_in_order(site):
     nav = re.search(r'<nav class="site-nav".*?</nav>', (site / "index.html").read_text(), re.S).group(0)
-    found = re.findall(r'<a href="([^"]+)"[^>]*>([^<]+)</a>', nav)
+    found = re.findall(r'<a href="([^"]+)"[^>]*>([^<]+)', nav)
     assert found == [(BASE + path, label) for label, path in NAV]
+    cv = re.search(r'<a href="[^"]+\.pdf"[^>]*>', nav).group(0)
+    assert 'target="_blank"' in cv and "noopener" in cv
 
 
 @pytest.mark.parametrize("slug,heads", [
@@ -50,10 +53,12 @@ def test_service_hides_internal_role(site):
     assert "eureka" not in (site / "service" / "index.html").read_text().lower()
 
 
-def test_cv_keeps_core_sections(site):
-    html = (site / "cv" / "index.html").read_text()
+def test_experience_page_sections(site):
+    html = (site / "experience" / "index.html").read_text()
     heads = re.findall(r'<section class="cv-section"[^>]*>\s*<h2[^>]*>([^<]+)</h2>', html)
-    assert heads == ["Experience", "Education", "Memberships"]
+    assert heads == ["Work", "Education", "Memberships"]
+    assert "<h1>Experience</h1>" in html
+    assert not (site / "cv").exists()
     for slug in ("awards", "service", "talks"):
         assert f'href="{BASE}/{slug}/"' in html
 
@@ -74,5 +79,5 @@ def test_external_links_open_in_new_tab(site):
 
 def test_internal_links_same_tab(site):
     for tag in re.findall(r"<a\b[^>]*>", (site / "index.html").read_text()):
-        if re.search(r'href="/', tag):
+        if re.search(r'href="/', tag) and ".pdf" not in tag:  # the CV PDF opens in a new tab on purpose
             assert "target=" not in tag, tag

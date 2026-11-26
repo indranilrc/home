@@ -13,12 +13,17 @@ def site(tmp_path_factory) -> Path:
     return out
 
 
-@pytest.mark.parametrize("page", ["awards", "service", "talks", "cv"])
+@pytest.mark.parametrize("page", ["awards", "service", "talks"])
 def test_record_lists_are_ordered(site, page):
     html = (site / page / "index.html").read_text()
     main = re.search(r"<main.*?</main>", html, re.S).group(0)
     assert "<ul" not in main, page
     assert "<ol" in main
+
+
+def test_experience_page_uses_plain_bullets(site):
+    main = re.search(r"<main.*?</main>", (site / "experience" / "index.html").read_text(), re.S).group(0)
+    assert "<ol" not in main and "<ul" in main
 
 
 def test_publications_numbered_continuously_descending(site):
