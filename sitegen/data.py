@@ -62,9 +62,15 @@ def _apply_item_overrides(section: dict, overrides: dict, name: str, warnings: l
 
     for g in section["groups"]:
         g["items"] = walk(g["items"])
+    added = [{"key": a["key"], "label": None, "html": a["html"], "text": a.get("text", ""), "children": []}
+             for a in overrides.get("_add", []) or []]
+    if added:
+        if not section["groups"]:
+            section["groups"].append({"title": None, "items": []})
+        section["groups"][-1]["items"].extend(added)
     section["groups"] = [g for g in section["groups"] if g["items"]]
     for key in overrides:
-        if key not in found:
+        if key != "_add" and key not in found:
             warnings.append(f"cv_overrides.yml: unknown key '{key}' in {name}")
 
 

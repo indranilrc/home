@@ -2,6 +2,8 @@
 # entry keys in content/generated/cv.json. The PDF download is unaffected.
 #   experience:  KEY: {bullets: [...]}  or  {hide: true}
 #   honors|service|talks|teaching|memberships|education:  KEY: {html: "..."}  or  {hide: true}
+#   To add an entry that is not in the CV (appended to the section's last group):
+#     SECTION: {_add: [{key: some-key, html: "..."}]}
 
 experience:
   slb-software-technology-innovation-center-october-2018-present:
@@ -59,3 +61,9 @@ teaching:
     html: "<strong>Advanced Time Series Analysis</strong>, SLB NExT AI Academy, 2025–present. Redesigned and teach the final course in the academy's data science track, covering decomposition, forecasting, anomaly detection, and time series foundation models."
   invited-tutorials-annual-conference-of-the-phm-society-2016:
     html: "<strong>Invited tutorials</strong>, Annual Conference of the PHM Society, 2016, 2017, 2019, and 2025, on model-based diagnostics, model-based prognostics, PHM in the cloud, and hybrid modeling."
+
+memberships:
+  # Not in the current CV; from the old website. Membership ended in 2018.
+  _add:
+    - key: aiaa-member-2015-2018
+      html: "<strong>AIAA</strong>: Member (2015–2018)"

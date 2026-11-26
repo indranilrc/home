@@ -93,3 +93,11 @@ def test_sidecar_files_have_no_duplicate_keys():
         keys = re.findall(r"^([A-Za-z0-9_.-]+):", (ROOT / "content" / name).read_text(), re.M)
         dupes = {k for k in keys if keys.count(k) > 1}
         assert not dupes, (name, dupes)
+
+
+def test_cv_override_adds_items(tmp_path):
+    overrides = {"honors": {"_add": [{"key": "extra-award", "html": "<strong>Extra</strong>, 2020"}]}}
+    content = load_content(make_root(tmp_path, overrides=overrides))
+    items = content.cv["honors"]["groups"][-1]["items"]
+    assert items[-1]["key"] == "extra-award" and items[-1]["html"] == "<strong>Extra</strong>, 2020"
+    assert content.warnings == []

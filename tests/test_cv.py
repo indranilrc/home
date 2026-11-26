@@ -48,3 +48,7 @@ def test_no_slb_internal_talks(page, tmp_path):
     build_site(tmp_path / "s")
     talks = (tmp_path / "s" / "talks" / "index.html").read_text()
     assert "Technical talks at SLB" not in talks and "Technical Talks at SLB" not in talks
+
+
+def test_aiaa_membership(page):
+    assert "<strong>AIAA</strong>: Member (2015–2018)" in page
