@@ -1,6 +1,7 @@
 # Site-only extras for publications, keyed by the CV \bibitem key
 # (e.g. PHM-13-a) or patent number key (e.g. US12608592).
 # Fields: type, url, award, themes. Anything here overrides the CV import.
+# Award categories for PHM-11-b/c come from the old site (the CV only says "Nominated").
 # DOIs below were matched to the CV titles exactly via Crossref and checked on doi.org (2026-11-26).
 
 ACIAAS-2018: {url: "https://doi.org/10.2514/5.9781624104794.0219.0242"}
@@ -48,8 +49,8 @@ MethodsX-19: {url: "https://doi.org/10.1016/j.mex.2019.02.015"}
 Neuro-18: {url: "https://doi.org/10.1016/j.neucom.2017.11.062"}
 PHM-10-a: {url: "https://doi.org/10.36001/phmconf.2010.v2i1.1804"}
 PHM-11-a: {url: "https://doi.org/10.36001/phmconf.2011.v3i1.2071"}
-PHM-11-b: {url: "https://doi.org/10.36001/phmconf.2011.v3i1.2037"}
-PHM-11-c: {url: "https://doi.org/10.36001/phmconf.2011.v3i1.2015"}
+PHM-11-b: {url: "https://doi.org/10.36001/phmconf.2011.v3i1.2037", award: "Nominated for Best Paper Award, Theoretical Paper Category"}
+PHM-11-c: {url: "https://doi.org/10.36001/phmconf.2011.v3i1.2015", award: "Nominated for Best Paper Award, Application Paper Category"}
 PHM-12-a: {url: "https://doi.org/10.36001/phmconf.2012.v4i1.2172"}
 PHM-12-b: {url: "https://doi.org/10.36001/phmconf.2012.v4i1.2112"}
 PHM-13-a: {url: "https://doi.org/10.36001/phmconf.2013.v5i1.2318"}

@@ -55,7 +55,7 @@ def build_site(out_dir: Path, include_drafts: bool = False, root: Path = ROOT) -
 
     nav = list(NAV)
     if content.posts:
-        nav.append(("Writing", "/writing/", "writing"))
+        nav.insert(2, ("Writing", "/writing/", "writing"))  # right after Publications
     ctx = {"content": content, "profile": content.profile, "nav": nav, "build_date": dt.date.today()}
     paths = []
     for rel, tpl, pid in PAGES:

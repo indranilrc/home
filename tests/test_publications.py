@@ -59,3 +59,9 @@ def test_book_details(page):
     assert "NASA Ames" in book
     assert "K. Goebel, M. Daigle, A. Saxena, S. Sankararaman, <strong>I. Roychoudhury</strong>, and J. Celaya" in book
     assert "With " not in book
+
+
+def test_2011_nomination_categories(page):
+    for key, cat in (("PHM-11-b", "Theoretical"), ("PHM-11-c", "Application")):
+        li = re.search(rf'<li class="pub" id="pub-{key}".*?</li>', page, re.S).group(0)
+        assert f'<span class="tag">Nominated for Best Paper Award, {cat} Paper Category</span>' in li

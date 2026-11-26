@@ -1,3 +1,4 @@
+import re
 import json
 from pathlib import Path
 
@@ -84,3 +85,11 @@ def test_cv_override_hides_and_replaces(tmp_path):
 def test_unknown_cv_override_key_warns(tmp_path):
     content = load_content(make_root(tmp_path, overrides={"honors": {"missing": {"hide": True}}}))
     assert any("cv_overrides.yml" in w and "missing" in w for w in content.warnings)
+
+
+def test_sidecar_files_have_no_duplicate_keys():
+    from build import ROOT
+    for name in ("pub_extras.yml", "cv_overrides.yml", "profile.yml"):
+        keys = re.findall(r"^([A-Za-z0-9_.-]+):", (ROOT / "content" / name).read_text(), re.M)
+        dupes = {k for k in keys if keys.count(k) > 1}
+        assert not dupes, (name, dupes)

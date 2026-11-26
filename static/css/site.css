@@ -86,7 +86,7 @@ main .pairs a .t { color: var(--fg); }
 .site-header { border-bottom: 1px solid var(--rule); }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4rem; }
 .site-name { font-weight: 600; text-decoration: none; letter-spacing: 0.005em; white-space: nowrap; }
-.site-nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 0.4rem 1.4rem; font-size: 0.875rem; }
+.site-nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 0.4rem 0.9rem; font-size: 0.84rem; }
 .site-nav a { white-space: nowrap; }
 .site-nav a { text-decoration: none; color: var(--muted); }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--fg); }

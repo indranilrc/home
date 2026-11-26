@@ -39,7 +39,9 @@ def test_post_renders_and_nav_appears(tmp_path):
     assert "<strong>world</strong>" in post
     assert 'property="og:type" content="article"' in post
     home = (out / "index.html").read_text()
-    assert re.search(r'<nav class="site-nav".*?>Writing</a>', home, re.S)
+    nav = re.search(r'<nav class="site-nav".*?</nav>', home, re.S).group(0)
+    labels = re.findall(r'<a href="[^"]+"[^>]*>([^<]+)', nav)
+    assert labels[:3] == ["Research", "Publications", "Writing"]
     assert "Recent writing" in home
     index = (out / "writing" / "index.html").read_text()
     assert "Why prognostics needs humility." in index

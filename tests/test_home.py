@@ -37,8 +37,9 @@ def test_selected_work_links_to_research(home):
 
 
 def test_email_fallback_present(home):
-    assert "indranil.r.c at gmail dot com" in home
-    assert "indranil.r.c@gmail.com" not in home
+    assert "indranil.roychoudhury at gmail dot com" in home
+    assert "indranil.roychoudhury@gmail.com" not in home
+    assert "indranil.r.c" not in home
 
 
 def test_fellow_mentioned_once(home):
