@@ -1,0 +1,13 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import group_sections %}
+{% block title %}Service · {{ site.title }}{% endblock %}
+{% block description %}Conference organization, program committees, and reviewing for journals and conferences in diagnostics, prognostics, and health management.{% endblock %}
+{% block content %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>Service</h1>
+    <p>Conference organizing, program committees, and reviewing, mostly for the PHM Society and the diagnosis research community.</p>
+  </header>
+  {{ group_sections(content.cv.service.groups) }}
+</div>
+{% endblock %}

@@ -54,7 +54,7 @@ The current github.io site was last updated in 2023 (publications in 2024). The 
 
 ## 5. Site Structure
 
-Navigation: **Research · Publications · CV**, plus the light/dark toggle. The name at the left links home. "Writing" joins the nav automatically once at least one article exists.
+Navigation: **Research · Publications · Talks & Teaching · Service · Awards · CV**, plus the light/dark toggle (revised 2026-11-26 at Indranil's request: awards, service, and talks/teaching get their own pages, as on the old site; the CV page keeps experience, education, and memberships). All links to other sites open in a new tab (`target="_blank" rel="noopener"`). The name at the left links home. "Writing" joins the nav automatically once at least one article exists.
 
 ```
 /                     Home

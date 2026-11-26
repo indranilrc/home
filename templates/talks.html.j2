@@ -1,0 +1,14 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import group_sections %}
+{% block title %}Talks &amp; Teaching · {{ site.title }}{% endblock %}
+{% block description %}Invited talks, conference tutorials, panels, and teaching on diagnostics, prognostics, hybrid modeling, and time series analysis.{% endblock %}
+{% block content %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>Talks &amp; Teaching</h1>
+    <p>Tutorials, panels, and talks, plus the courses I teach.</p>
+  </header>
+  {{ group_sections(content.cv.talks.groups) }}
+  {{ group_sections(content.cv.teaching.groups, "Teaching") }}
+</div>
+{% endblock %}

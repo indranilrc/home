@@ -7,3 +7,21 @@
 {%- else %}<a href="{{ ('/publications/#pub-' ~ p.key) | url }}">{{ p.title }}</a>{% endif %}
 {%- if p.year %}<span class="muted">, {{ p.year }}</span>{% endif %}</li>
 {%- endmacro %}
+
+
+{% macro item_list(list) -%}
+<ul class="cv-list">
+  {% for it in list %}
+  <li>{{ it.html | safe }}{% if it.children %}<ul>{% for c in it.children %}<li>{{ c.html | safe }}</li>{% endfor %}</ul>{% endif %}</li>
+  {% endfor %}
+</ul>
+{%- endmacro %}
+
+{% macro group_sections(groups, default_title="") -%}
+{% for g in groups %}
+<section class="cv-section">
+  <h2>{{ (g.title or default_title) | group_title }}</h2>
+  <div>{{ item_list(g['items']) }}</div>
+</section>
+{% endfor %}
+{%- endmacro %}

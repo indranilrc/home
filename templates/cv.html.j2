@@ -26,7 +26,7 @@
 <div class="wrap">
   <header class="page-head">
     <h1>CV</h1>
-    <p>A short version of my CV. The full version, with every paper, patent, and service role, is available as a PDF.</p>
+    <p>A short version of my CV. <a href="{{ '/awards/' | url }}">Awards</a>, <a href="{{ '/service/' | url }}">service</a>, and <a href="{{ '/talks/' | url }}">talks and teaching</a> have their own pages. The full version, with everything in one place, is available as a PDF.</p>
     <p class="cv-actions"><a href="{{ '/IndranilRoychoudhury_CV.pdf' | url }}">Download the full CV (PDF)</a></p>
   </header>
 
@@ -44,10 +44,6 @@
   </section>
 
   {{ section("Education", cv.education) }}
-  {{ section("Honors and awards", cv.honors) }}
-  {{ section("Professional service", cv.service) }}
-  {{ section("Talks and tutorials", cv.talks) }}
-  {{ section("Teaching", cv.teaching) }}
   {{ section("Memberships", cv.memberships) }}
 </div>
 {% endblock %}

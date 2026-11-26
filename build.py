@@ -8,18 +8,31 @@ import sys
 from pathlib import Path
 
 from sitegen.data import load_content
-from sitegen.render import copy_static, make_env, write
+import urllib.parse
+
+from sitegen.render import copy_static, make_env, mark_external
+from sitegen.render import write as _write
 from sitegen.writing import atom_feed
 
 ROOT = Path(__file__).resolve().parent
 
-NAV = [("Research", "/research/", "research"), ("Publications", "/publications/", "publications"), ("CV", "/cv/", "cv")]
+NAV = [
+    ("Research", "/research/", "research"),
+    ("Publications", "/publications/", "publications"),
+    ("Talks & Teaching", "/talks/", "talks"),
+    ("Service", "/service/", "service"),
+    ("Awards", "/awards/", "awards"),
+    ("CV", "/cv/", "cv"),
+]
 
 # (output path, template, page id)
 PAGES = [
     ("index.html", "home.html.j2", "home"),
     ("research/index.html", "research.html.j2", "research"),
     ("publications/index.html", "publications.html.j2", "publications"),
+    ("talks/index.html", "talks.html.j2", "talks"),
+    ("service/index.html", "service.html.j2", "service"),
+    ("awards/index.html", "awards.html.j2", "awards"),
     ("cv/index.html", "cv.html.j2", "cv"),
     ("404.html", "404.html.j2", "404"),
 ]
@@ -34,6 +47,11 @@ def build_site(out_dir: Path, include_drafts: bool = False, root: Path = ROOT) -
     for w in content.warnings:
         print("warning:", w, file=sys.stderr)
     env = make_env(root / "templates", content.site)
+    own_host = urllib.parse.urlparse(content.site["url"]).hostname
+
+    def write(out: Path, rel: str, text: str) -> None:
+        _write(out, rel, mark_external(text, own_host) if rel.endswith(".html") else text)
+
     nav = list(NAV)
     if content.posts:
         nav.append(("Writing", "/writing/", "writing"))

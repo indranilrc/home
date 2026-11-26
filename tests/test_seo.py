@@ -8,7 +8,8 @@ from build import build_site
 from tests.siteconf import BASE, SITE, URL  # noqa: F401
 from tests.hygiene import denylisted
 
-PAGES = ["index.html", "research/index.html", "publications/index.html", "cv/index.html"]
+PAGES = ["index.html", "research/index.html", "publications/index.html", "talks/index.html",
+         "service/index.html", "awards/index.html", "cv/index.html"]
 FORBIDDEN = ["idf-", "eureka", "sharepoint", "stic.slb.com", "degreed"]
 
 
