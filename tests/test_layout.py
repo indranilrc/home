@@ -88,3 +88,8 @@ def test_toggle_uses_sun_and_moon_icons(site):
     assert "light</" not in btn and "dark</" not in btn  # no text label
     js = (site / "js" / "theme.js").read_text()
     assert '|| "dark"' in js
+    css = (site / "css" / "site.css").read_text()
+    # The icon shows the mode a click switches to: sun in dark mode, moon in light mode.
+    assert ".theme-toggle .icon-moon { display: none; }" in css
+    assert ':root[data-theme="light"] .theme-toggle .icon-moon { display: block; }' in css
+    assert ':root[data-theme="light"] .theme-toggle .icon-sun { display: none; }' in css
