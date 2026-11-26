@@ -14,6 +14,7 @@
   --faint: #8f8b83;
   --rule: #2a2e33;
   --accent: #d9a441;
+  --link: #e3b04f;
   --motif-op: 0.5;
   --sans: "Plex Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   --mono: "Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -28,6 +29,7 @@
   --faint: #767676;
   --rule: #e2e2e2;
   --accent: #0b6e69;
+  --link: #0a6b66;
   --motif-op: 0.34;
   color-scheme: light;
 }
@@ -72,6 +74,13 @@ main p, main li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; hyp
 .cv-list li::marker, .job li::marker, .related li::marker, .pub::marker {
   font: 400 0.75rem var(--mono); color: var(--faint);
 }
+
+/* Links in page content use the accent color with a matching underline. */
+main a { color: var(--link); text-decoration-color: color-mix(in srgb, var(--link) 45%, transparent); text-decoration-thickness: 1px; }
+main a:hover { text-decoration-color: var(--link); text-decoration-thickness: 2px; }
+main a strong, main a em, .pub a strong, .cv-list a strong { color: inherit; }
+main .pairs a { color: inherit; }
+main .pairs a .t { color: var(--fg); }
 
 /* ---------------------------------------------------------------- header */
 .site-header { border-bottom: 1px solid var(--rule); }

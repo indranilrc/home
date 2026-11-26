@@ -102,3 +102,24 @@ def test_body_text_justified():
     rule = rule[: rule.index("}")]
     assert "text-align: justify" in rule and "hyphens: auto" in rule
     assert ".elsewhere, .cv-actions, .more, .empty, .job-role, .related li { text-align: left; }" in css
+
+
+def _contrast(a: str, b: str) -> float:
+    def lum(h):
+        rgb = [int(h[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+        rgb = [c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4 for c in rgb]
+        return 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2]
+    hi, lo = sorted((lum(a), lum(b)), reverse=True)
+    return (hi + 0.05) / (lo + 0.05)
+
+
+def test_content_links_stand_out():
+    css = (ROOT / "static" / "css" / "site.css").read_text()
+    rule = css[css.index("main a {"):]
+    rule = rule[: rule.index("}")]
+    assert "color: var(--link)" in rule and "text-decoration-color" in rule
+    for block, bg in ((":root {", "#14171a"), (':root[data-theme="light"] {', "#ffffff")):
+        tokens = css[css.index(block):]
+        tokens = tokens[: tokens.index("}")]
+        link = re.search(r"--link: (#[0-9a-f]{6})", tokens).group(1)
+        assert _contrast(link, bg) >= 4.5, (block, link)
