@@ -3,9 +3,41 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+(function(){try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light"){document.documentElement.dataset.theme=t;}}catch(e){}})();
+</script>
 <title>{% block title %}{{ site.title }}{% endblock %}</title>
+<meta name="description" content="{% block description %}{{ profile.description | default('') }}{% endblock %}">
+<link rel="icon" href="{{ '/img/favicon.svg' | url }}" type="image/svg+xml">
+<link rel="preload" href="{{ '/fonts/ibm-plex-sans-400-normal.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/css/site.css' | url }}">
+{% block head_extra %}{% endblock %}
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="{{ '/' | url }}"{% if page_id == 'home' %} aria-current="page"{% endif %}>{{ site.title }}</a>
+    <nav class="site-nav" aria-label="Main">
+      {% for label, path, pid in nav %}
+      <a href="{{ path | url }}"{% if page_id == pid %} aria-current="page"{% endif %}>{{ label }}</a>
+      {% endfor %}
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false" hidden>&#9675; light</button>
+    </nav>
+  </div>
+</header>
+<main id="main">
 {% block content %}{% endblock %}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; {{ build_date.year }} {{ site.title }} &middot; Last updated {{ build_date.strftime('%B') }} {{ build_date.day }}, {{ build_date.year }}</span>
+    <nav aria-label="Elsewhere">
+      {% for link in profile.links | default([]) %}<a href="{{ link.url }}" rel="me noopener">{{ link.label }}</a>{% endfor %}
+    </nav>
+  </div>
+</footer>
+<script src="{{ '/js/theme.js' | url }}" defer></script>
+{% block scripts %}{% endblock %}
 </body>
 </html>
