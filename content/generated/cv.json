@@ -1,0 +1,870 @@
+{
+ "experience": [
+  {
+   "key": "slb-software-technology-innovation-center-october-2018-present",
+   "org": "SLB Software Technology Innovation Center",
+   "location": "Menlo Park, California, USA",
+   "dates": "October 2018 – Present",
+   "role": "Principal AI Scientist",
+   "bullets": [
+    "Lead prognostics and health management (PHM) and scientific machine learning research across well construction, production systems, artificial lift, and new energy, taking work from research to working prototypes and, in one case, a commercial SLB product.",
+    "Designed and implemented model-based PHM algorithms in Python spanning the full pipeline: nominal model observer, fault detection and isolation, faulty model observer, and particle-filter prognostics with calibrated uncertainty. Packaged as an <strong>equipment-agnostic framework</strong> reused across three physically distinct equipment classes.",
+    "The acid-gas membrane PHM workflow built on this pipeline was <strong>productized into a commercial SLB uptime-assurance offering</strong>.",
+    "Conceived and led <strong>AutoPHM</strong> (US 2025/0315037 A1), an end-to-end automated PHM framework unifying transfer-learning-based model adaptation and ground-truth-free RUL evaluation, so that domain engineers rather than PHM specialists can deploy validated PHM solutions; currently leading its implementation. Built the underlying PHM algorithm library, which also powers a no-code PHM platform. Presented the strategy to <strong>SLB executive leadership</strong>, securing continued investment through 2026.",
+    "Developed the <strong>Jacobian Feature Regression (JFR)</strong> algorithm for adapting RUL models as a system transitions from nominal to faulty operation; published at the 8th European PHM Conference, 2024 (US 2025/0315038 A1).",
+    "Invented a framework for <strong>evaluating RUL prediction algorithms without run-to-failure ground truth</strong>, published at the 9th European PHM Conference (2026); US 2026/0133574 A1.",
+    "Built <strong>surrogate models</strong> for slow, high-fidelity physics simulators: developed a physics-informed surrogate for methane flow simulation and an ML surrogate for geochemistry simulation, and applied graph neural networks and Fourier neural operators as surrogates for reservoir simulation of subsurface fluid flow.",
+    "Developed the two-step physics-informed method for <strong>real-time gamma ray log generation</strong> from surface drilling parameters of offset wells, removing dependence on downhole logging tools; published in <em>SPE Journal</em> (2024) and at SPE/IADC (2023), with IP published as EP 4 630 852 A1.",
+    "Designed the hybrid physics-ML <strong>stick-slip prediction</strong> algorithm for rotary drilling, including the depth-to-time reformulation and state-space model that grounded the approach; predicts stick-slip in the next drill stand and returns actionable RPM and weight-on-bit guidance to the driller (SPE/IADC 2022; EP 4 423 542 A1).",
+    "Designed the modeling approach for <strong>automated ESP failure analysis</strong>, predicting the initial failure point from historical Dismantling, Inspection and Failure Analysis records and production time series; granted U.S. Patent <strong>12,608,592</strong> (2026).",
+    "Co-inventor on computer-vision <strong>rig state detection</strong> from video, granted U.S. Patent <strong>12,136,267</strong> (2024), and on <strong>gas leak detection</strong> from image data, granted U.S. Patent <strong>12,467,818</strong> (2025).",
+    "Conceived and led a <strong>Generalizable Framework for Hybrid Modeling of Physical Systems</strong>, since applied across drilling dynamics, methane flow, geochemistry simulation, new energy, and production systems (<a href=\"https://patents.google.com/patent/US20260203471A1/en\">US 2026/0203471 A1</a>).",
+    "Helped define SLB’s <strong>scientific foundation model</strong> agenda: co-developed asset-specific time series foundation models for surface production assets (ADIPEC 2025), and developed a methodology for building end-to-end PHM frameworks in foundation-model latent space (US 2026/0079480 A1, US 2026/0079511 A1).",
+    "Defined the protocol for evaluating classical, quantum, and hybrid machine learning algorithms and co-authored the resulting paper at <em>IEEE QCE 2024</em>.",
+    "<strong>Mentor and technical reviewer</strong> within SLB’s technical career progression process: formal mentor to 3 candidates (2025–2026) and formal reviewer on 4 promotion cases (2020–2025), having supported <strong>18 promotion nominations</strong> across all levels since 2020, 11 of them unsolicited."
+   ]
+  },
+  {
+   "key": "sgt-december-2010-september-2018",
+   "org": "SGT, Inc., NASA Ames Research Center",
+   "location": "Moffett Field, California, USA",
+   "dates": "December 2010 – September 2018",
+   "role": "Senior Research Scientist",
+   "bullets": [
+    "Task Lead for “Health Management for Aerospace Systems” under NASA’s ISRDS-3 contract; defined the technical direction, wrote the winning diagnostics and prognostics research proposal, and <strong>led a team</strong> of six research engineers, software engineers, and postdoctoral researchers, four of them holding doctorates.",
+    "Co-developed and co-led the <strong>Real-Time Safety Monitoring (RTSM)</strong> framework for the National Airspace System, which predicts safety margins in real time from live NAS flight data.",
+    "Led the development of analysis tools for NASA’s Space Launch System (SLS) State Analysis Model (SAM) project; these tools were used to improve fault modeling coverage and diagnosis accuracy.",
+    "Co-developed and open-sourced <strong>Virtual ADAPT</strong>, a NASA open-source MATLAB/Simulink simulation of the ADAPT spacecraft electrical power distribution testbed.",
+    "Served as technical reviewer for 5 NASA SBIR proposals on fault diagnostics and prognostics.",
+    "Developed algorithms for diagnosing faults in a Forward Osmosis Water Recycling System (WRS) deployed at NASA Ames Research Center and prognosticating when the WRS would need maintenance actions, such as changing the membranes due to fouling. This WRS is representative of those that can be used for long-term crewed space missions and serves as a testbed for long-duration testing of next-generation spacecraft water recycling systems for such missions.",
+    "Assessed the impact of deploying unrestricted Unmanned Aircraft Systems (UAS) in the National Airspace System (NAS) of the United States through a simulation-based approach. Impact was assessed in terms of various performance-, safety-, and environment-related metrics, such as flight delay of commercial flights, congestion in the NAS, loss of separation conflicts between commercial flights and UAS, fuel burn of UAS and commercial flights, and noise level at airports.",
+    "Studied the effect of damage progression model choice on prognostics performance. Developed different damage progression models for a centrifugal pump, and investigated how model changes influence prognostics performance. Results demonstrated a clear need for damage progression models that are accurate over long time horizons under varied loading conditions. <em>A paper summarizing this work won the best paper award at the Annual Conference of the Prognostics and Health Management Society, 2011.</em>",
+    "Contributor to the NASA Systems Engineering Handbook (SP-2016-6105), Rev 2, on topics related to Fault Management.",
+    "Member of the SAE HM-1 Integrated Vehicle Health Management (IVHM) Committee developing the Aerospace Recommended Practice “Guidelines for Writing IVHM Requirements for Aerospace Systems” (ARP6883). This document is aimed at providing working engineers and program managers clear guidance on the systems engineering aspects of IVHM design in aerospace systems.",
+    "Developed a systematic process for verifying prognostics algorithms as the prognostics algorithm is being developed. Demonstrated this process using a battery health management system deployed on an electric unmanned aerial vehicle as well as a planetary rover. <em>A paper summarizing this work was nominated for a best paper award by the Prognostics and Health Management Society at the Annual Conference of the Prognostics and Health Management Society, 2013.</em>",
+    "Developed an integrated distributed diagnosis and prognosis approach that is formally rooted in structural model decomposition, allowing the system model to be decomposed in order to define local (i.e., subsystem- and component-level) diagnosis sub-problems that can be solved in parallel. This research has been applied to several complex real-world systems, for example, multi-tank systems such as used in propellant loading systems for NASA’s ground based launch support systems, and spacecraft power storage and distribution systems."
+   ]
+  },
+  {
+   "key": "sgt-august-2009-december-2010",
+   "org": "SGT, Inc., NASA Ames Research Center",
+   "location": "Moffett Field, California, USA",
+   "dates": "August 2009 – December 2010",
+   "role": "Postdoctoral Computer Scientist",
+   "bullets": [
+    "Part of the team that built an electromechanical actuator (EMA) test stand that allows testing of EMA fault detection and prognosis technologies in a flight environment, thus substantially increasing their technology maturity without injecting faults into any real aircraft. This test stand is christened the FLyable Electro-mechanical Actuator (FLEA) testbed.",
+    "Developed and implemented a prognostic health management system for the FLEA testbed that is aimed at detecting and tracking several fault types. To date, the FLEA testbed and the algorithm on-board have completed two test flights of the stand on U.S. Air Force C-17 aircraft and several more experiments on UH-60 Blackhawk helicopters."
+   ]
+  },
+  {
+   "key": "vanderbilt-university-august-2004-july-2009",
+   "org": "Vanderbilt University",
+   "location": "Nashville, Tennessee, USA",
+   "dates": "August 2004 – July 2009",
+   "role": "Research Assistant, Institute for Software Integrated Systems",
+   "bullets": [
+    "Modeled large-scale hybrid systems using hybrid bond graphs and derived high-fidelity simulation models for the Advanced Water Recovery System developed at NASA Johnson Space Center.",
+    "Developed a methodology for distributed fault diagnosis of complex physical systems. Implemented algorithms to analyze the diagnosability of continuous systems and design distributed fault diagnosers that communicate a minimal number of measurements amongst themselves to generate globally correct diagnosis results through local analysis, without any central coordinator. These algorithms have been applied to the Advanced Water Recovery System.",
+    "Developed a unified framework for diagnosing abrupt (fast) and incipient (gradual) parametric faults by combining a qualitative diagnosis scheme with a Dynamic Bayesian Network-based diagnosis approach.",
+    "Developed an approach for improving the efficiency of inference of Dynamic Bayesian Networks (DBNs) by factoring the DBN into smaller factors such that each factor is conditionally independent from all other factors given the measurements that are communicated to it.",
+    "Developed a distributed scheme for diagnosing abrupt and incipient faults by combining qualitative diagnosis schemes with inference algorithms applied to factored DBNs.",
+    "Developed models of a spacecraft electrical power distribution system called the Advanced Diagnostics and Prognostics Testbed (ADAPT) at NASA Ames Research Center that was used in empirical human-in-the-loop testing of fault management interfaces for next-generation spacecraft performed by NASA Ames researchers involving real pilots.",
+    "Architected a software tool suite for the modeling and simulation of hybrid systems modeled as hybrid bond graphs, called the Modeling and Transformation of Hybrid Bond Graphs for Simulation (MoTHS) that was later extended to the META project funded by DARPA."
+   ]
+  },
+  {
+   "key": "mission-critical-technologies-summer-2007",
+   "org": "Mission Critical Technologies, Inc., NASA Ames Research Center",
+   "location": "Moffett Field, California, USA",
+   "dates": "Summer 2007",
+   "role": "Intern, Intelligent Systems Division (Code TI)",
+   "bullets": [
+    "Developed high-fidelity hybrid models for the Advanced Diagnostics and Prognostics Testbed (ADAPT).",
+    "Improved the efficiency of simulation software for hybrid bond graphs. Developed the <strong>Virtual ADAPT</strong> simulator.",
+    "Implemented the Fault Adaptive Control Technology (FACT) software as a test article for ADAPT. Performed diagnosis experiments using FACT on ADAPT."
+   ]
+  },
+  {
+   "key": "mission-critical-technologies-summer-2006",
+   "org": "Mission Critical Technologies, Inc., NASA Ames Research Center",
+   "location": "Moffett Field, California, USA",
+   "dates": "Summer 2006",
+   "role": "Intern, Intelligent Systems Division (Code TI)",
+   "bullets": [
+    "Developed component-based hybrid models for the Advanced Diagnostics and Prognostics Testbed.",
+    "Developed software to construct and execute hybrid bond graphs as MATLAB Simulink models."
+   ]
+  },
+  {
+   "key": "broadcom-india-pvt-ltd-spring-2004",
+   "org": "Broadcom India Pvt. Ltd.",
+   "location": "Bangalore, Karnataka, India",
+   "dates": "Spring 2004",
+   "role": "Intern, Firmware Group",
+   "bullets": [
+    "Implemented a Low Complexity MPEG 2 AAC Encoder."
+   ]
+  }
+ ],
+ "education": {
+  "title": "Education",
+  "intro_html": "",
+  "groups": [
+   {
+    "title": null,
+    "items": [
+     {
+      "key": "ph-d-computer-science-vanderbilt-university-nashville-te",
+      "label": null,
+      "html": "<strong>Ph.D. Computer Science</strong>, Vanderbilt University, Nashville, Tennessee, USA August 2009 <em>Dissertation:</em> Distributed Diagnosis of Continuous Systems: Global Diagnosis Through Local Analysis",
+      "text": "Ph.D. Computer Science, Vanderbilt University, Nashville, Tennessee, USA August 2009 Dissertation: Distributed Diagnosis of Continuous Systems: Global Diagnosis Through Local Analysis",
+      "children": []
+     },
+     {
+      "key": "m-s-computer-science-vanderbilt-university-nashville-ten",
+      "label": null,
+      "html": "<strong>M.S. Computer Science</strong>, Vanderbilt University, Nashville, Tennessee, USA May 2006",
+      "text": "M.S. Computer Science, Vanderbilt University, Nashville, Tennessee, USA May 2006",
+      "children": []
+     },
+     {
+      "key": "b-e-hons-electrical-and-electronics-engineering-bits-pi",
+      "label": null,
+      "html": "<strong>B.E. (Hons.) Electrical and Electronics Engineering</strong>, BITS Pilani, Rajasthan, India May 2004",
+      "text": "B.E. (Hons.) Electrical and Electronics Engineering, BITS Pilani, Rajasthan, India May 2004",
+      "children": []
+     }
+    ]
+   }
+  ]
+ },
+ "honors": {
+  "title": "Honors and Awards",
+  "intro_html": "",
+  "groups": [
+   {
+    "title": "Individual Awards",
+    "items": [
+     {
+      "key": "fellow-the-prognostics-and-health-management-society-class",
+      "label": null,
+      "html": "<strong><a href=\"https://phmsociety.org/phm-society-awards/bios-of-phm-society-fellows/\">Fellow, The Prognostics and Health Management Society</a></strong>, Class of 2023. Inducted October 31, 2023, at the Annual Conference of the PHM Society in Salt Lake City, Utah. The society’s highest individual honor, with at most five awarded annually from a global pool of nominees. Citation: “Dr. Indranil Roychoudhury is a leading figure in Prognostics and Health Management. His pioneering work in the field has laid the foundation for diagnostics and prognostics at the system level. He has been a strong advocate for model-based thinking in PHM and has applied his expertise to diverse areas, including aerospace systems, national airspace, and the oil and gas industry.”",
+      "text": "Fellow, The Prognostics and Health Management Society, Class of 2023. Inducted October 31, 2023, at the Annual Conference of the PHM Society in Salt Lake City, Utah. The society’s highest individual honor, with at most five awarded annually from a global pool of nominees. Citation: “Dr. Indranil Roychoudhury is a leading figure in Prognostics and Health Management. His pioneering work in the field has laid the foundation for diagnostics and prognostics at the system level. He has been a strong advocate for model-based thinking in PHM and has applied his expertise to diverse areas, including aerospace systems, national airspace, and the oil and gas industry.”",
+      "children": []
+     },
+     {
+      "key": "isrds-certificate-of-achievement-intelligent-systems-resear",
+      "label": null,
+      "html": "<strong>ISRDS Certificate of Achievement</strong> (Intelligent Systems Research and Development Support, NASA Ames) awarded for Outstanding Leadership and Technical Contributions to the Real-Time Assessment and Modeling of National Airspace System (NAS) Safety Margins (RTSM) Project, December 2017.",
+      "text": "ISRDS Certificate of Achievement (Intelligent Systems Research and Development Support, NASA Ames) awarded for Outstanding Leadership and Technical Contributions to the Real-Time Assessment and Modeling of National Airspace System (NAS) Safety Margins (RTSM) Project, December 2017.",
+      "children": []
+     },
+     {
+      "key": "isrds-certificate-of-achievement-awarded-for-leadership-in-t",
+      "label": null,
+      "html": "<strong>ISRDS Certificate of Achievement</strong> awarded for Leadership in the Area of Health Management of Aerospace Systems, September 2016.",
+      "text": "ISRDS Certificate of Achievement awarded for Leadership in the Area of Health Management of Aerospace Systems, September 2016.",
+      "children": []
+     },
+     {
+      "key": "senior-member-ieee-2015",
+      "label": null,
+      "html": "<strong>Senior Member, IEEE</strong>, 2015.",
+      "text": "Senior Member, IEEE, 2015.",
+      "children": []
+     },
+     {
+      "key": "isrds-certificate-of-achievement-awarded-for-excellence-in-t",
+      "label": null,
+      "html": "<strong>ISRDS Certificate of Achievement</strong> awarded for Excellence in the Development of System Level Prognostics Capabilities for many projects, January 2015.",
+      "text": "ISRDS Certificate of Achievement awarded for Excellence in the Development of System Level Prognostics Capabilities for many projects, January 2015.",
+      "children": []
+     },
+     {
+      "key": "nasa-patent-application-initial-award-awarded-for-a-patent-a",
+      "label": null,
+      "html": "<strong>NASA Patent Application Initial Award</strong> awarded for a patent application filed with the United States Patent and Trademark Office on behalf of NASA, 2015.",
+      "text": "NASA Patent Application Initial Award awarded for a patent application filed with the United States Patent and Trademark Office on behalf of NASA, 2015.",
+      "children": []
+     },
+     {
+      "key": "phm-society-chairmans-superstar-award-october-2014",
+      "label": null,
+      "html": "<strong>PHM Society Chairman’s Superstar Award</strong>, October 2014.",
+      "text": "PHM Society Chairman’s Superstar Award, October 2014.",
+      "children": []
+     },
+     {
+      "key": "graduate-research-assistantship-vanderbilt-university-augu",
+      "label": null,
+      "html": "<strong>Graduate Research Assistantship</strong>, Vanderbilt University, August 2004 – July 2009.",
+      "text": "Graduate Research Assistantship, Vanderbilt University, August 2004 – July 2009.",
+      "children": []
+     }
+    ]
+   },
+   {
+    "title": "Group Awards",
+    "items": [
+     {
+      "key": "performed-by-slb-bronze-award-november-2022-for-leadersh",
+      "label": null,
+      "html": "<strong>Performed by SLB – Bronze Award</strong>, November 2022, for leadership of the scientific hybrid modeling theme at STIC under the “Digital Singularity - Injecting the AI in Domain” initiative. Performed by SLB is the company’s annual, CEO-sponsored recognition program for teamwork, innovation, and business impact (22nd edition, more than 1,000 submissions).",
+      "text": "Performed by SLB – Bronze Award, November 2022, for leadership of the scientific hybrid modeling theme at STIC under the “Digital Singularity - Injecting the AI in Domain” initiative. Performed by SLB is the company’s annual, CEO-sponsored recognition program for teamwork, innovation, and business impact (22nd edition, more than 1,000 submissions).",
+      "children": []
+     },
+     {
+      "key": "finalist-slb-fizz-digital-innovation-forum-with-j-prost",
+      "label": null,
+      "html": "<strong>Finalist, <a href=\"https://careers.slb.com/inside-slb/our-stories/fizz\">SLB Fizz Digital Innovation Forum</a></strong> (with J. Prost), 2021, for a company-wide platform that democratizes prognostics and health management. Fizz is SLB’s annual company-wide digital innovation forum; finalists pitch to a panel of technical experts and executive leadership.",
+      "text": "Finalist, SLB Fizz Digital Innovation Forum (with J. Prost), 2021, for a company-wide platform that democratizes prognostics and health management. Fizz is SLB’s annual company-wide digital innovation forum; finalists pitch to a panel of technical experts and executive leadership.",
+      "children": []
+     },
+     {
+      "key": "nasa-group-achievement-award-awarded-to-the-systems-health-a",
+      "label": null,
+      "html": "<strong>NASA Group Achievement Award</strong> awarded to the Systems-Health and Operations Open-Data Team for outstanding contributions to the open data initiative by conducting and posting experimental system fault and run-to-failure datasets with exceptional scientific value, June 2018.",
+      "text": "NASA Group Achievement Award awarded to the Systems-Health and Operations Open-Data Team for outstanding contributions to the open data initiative by conducting and posting experimental system fault and run-to-failure datasets with exceptional scientific value, June 2018.",
+      "children": []
+     },
+     {
+      "key": "nasa-group-achievement-award-awarded-to-the-discovery-and-sy",
+      "label": null,
+      "html": "<strong>NASA Group Achievement Award</strong> awarded to the Discovery and Systems Health Open-Sourcing Team for outstanding contributions in open sourcing software tools for health management and data science practitioners, June 2017.",
+      "text": "NASA Group Achievement Award awarded to the Discovery and Systems Health Open-Sourcing Team for outstanding contributions in open sourcing software tools for health management and data science practitioners, June 2017.",
+      "children": []
+     },
+     {
+      "key": "phm-society-contributor-of-the-year-award-awarded-to-the-nas",
+      "label": null,
+      "html": "<strong>PHM Society Contributor of the Year Award</strong> awarded to the NASA Prognostics Center of Excellence, October 2017.",
+      "text": "PHM Society Contributor of the Year Award awarded to the NASA Prognostics Center of Excellence, October 2017.",
+      "children": []
+     },
+     {
+      "key": "nasa-group-achievement-award-awarded-to-the-airspace-real-ti",
+      "label": null,
+      "html": "<strong>NASA Group Achievement Award</strong> awarded to the Airspace Real-Time Safety Modeling Team for advancing quantification of airspace safety margin, July 2016.",
+      "text": "NASA Group Achievement Award awarded to the Airspace Real-Time Safety Modeling Team for advancing quantification of airspace safety margin, July 2016.",
+      "children": []
+     },
+     {
+      "key": "nasa-group-achievement-award-awarded-to-the-advanced-ground",
+      "label": null,
+      "html": "<strong>NASA Group Achievement Award</strong> awarded to the Advanced Ground Systems Maintenance (AGSM) Team for outstanding education and teamwork needed to design, develop, and activate Advanced Ground System Maintenance systems, May 2015.",
+      "text": "NASA Group Achievement Award awarded to the Advanced Ground Systems Maintenance (AGSM) Team for outstanding education and teamwork needed to design, develop, and activate Advanced Ground System Maintenance systems, May 2015.",
+      "children": []
+     },
+     {
+      "key": "nasa-group-achievement-award-awarded-to-the-prognostics-grou",
+      "label": null,
+      "html": "<strong>NASA Group Achievement Award</strong> awarded to the Prognostics Group for groundbreaking foundational discoveries in the field of Prognostics and Health Management, August 2014.",
+      "text": "NASA Group Achievement Award awarded to the Prognostics Group for groundbreaking foundational discoveries in the field of Prognostics and Health Management, August 2014.",
+      "children": []
+     },
+     {
+      "key": "isrds-team-recognition-award-for-outstanding-contribution-to",
+      "label": null,
+      "html": "<strong>ISRDS Team Recognition Award</strong> for Outstanding Contribution to the Ames Prognostics Center of Excellence and to the Prognostics Community, December 2012.",
+      "text": "ISRDS Team Recognition Award for Outstanding Contribution to the Ames Prognostics Center of Excellence and to the Prognostics Community, December 2012.",
+      "children": []
+     }
+    ]
+   },
+   {
+    "title": "Paper Awards",
+    "items": [
+     {
+      "key": "best-theory-paper-award-annual-conference-of-the-prognosti",
+      "label": null,
+      "html": "<strong>Best Theory Paper Award</strong> – Annual Conference of the Prognostics and Health Management Society, September 2011.",
+      "text": "Best Theory Paper Award – Annual Conference of the Prognostics and Health Management Society, September 2011.",
+      "children": []
+     }
+    ]
+   },
+   {
+    "title": "Competition Awards",
+    "items": [
+     {
+      "key": "winner-diagnostic-problem-i-fourth-international-diagnost",
+      "label": null,
+      "html": "<strong>Winner</strong> – Diagnostic Problem I: Fourth International Diagnostic Competition, 2013.",
+      "text": "Winner – Diagnostic Problem I: Fourth International Diagnostic Competition, 2013.",
+      "children": []
+     },
+     {
+      "key": "winner-diagnostic-problem-i-third-international-diagnosti",
+      "label": null,
+      "html": "<strong>Winner</strong> – Diagnostic Problem I: Third International Diagnostic Competition, 2011.",
+      "text": "Winner – Diagnostic Problem I: Third International Diagnostic Competition, 2011.",
+      "children": []
+     }
+    ]
+   }
+  ]
+ },
+ "service": {
+  "title": "Professional Service",
+  "intro_html": "",
+  "groups": [
+   {
+    "title": "Conference Organization",
+    "items": [
+     {
+      "key": "37th-international-workshop-on-principles-of-diagnosis-and-r",
+      "label": null,
+      "html": "37th International Workshop on Principles of Diagnosis and Resilient Systems (DX-26), <strong>Program Committee Member</strong>",
+      "text": "37th International Workshop on Principles of Diagnosis and Resilient Systems (DX-26), Program Committee Member",
+      "children": []
+     },
+     {
+      "key": "annual-conference-of-the-prognostics-and-health-management-s",
+      "label": null,
+      "html": "Annual Conference of the Prognostics and Health Management Society, 2026, <strong>Website Development Chair</strong>, <strong>Panel Moderator</strong>, <strong>Panelist</strong>, <strong>Doctoral Symposium Panelist</strong>",
+      "text": "Annual Conference of the Prognostics and Health Management Society, 2026, Website Development Chair, Panel Moderator, Panelist, Doctoral Symposium Panelist",
+      "children": []
+     },
+     {
+      "key": "36th-international-workshop-on-principles-of-diagnosis-dx-2",
+      "label": null,
+      "html": "36th International Workshop on Principles of Diagnosis (DX-25), <strong>Program Committee Member</strong>",
+      "text": "36th International Workshop on Principles of Diagnosis (DX-25), Program Committee Member",
+      "children": []
+     },
+     {
+      "key": "annual-conference-of-the-prognostics-and-health-management-s-2",
+      "label": null,
+      "html": "Annual Conference of the Prognostics and Health Management Society, 2025, <strong>Website Development Chair</strong>",
+      "text": "Annual Conference of the Prognostics and Health Management Society, 2025, Website Development Chair",
+      "children": []
+     },
+     {
+      "key": "35th-international-workshop-on-principles-of-diagnosis-dx-2",
+      "label": null,
+      "html": "35th International Workshop on Principles of Diagnosis (DX-24), <strong>Program Committee Member</strong>",
+      "text": "35th International Workshop on Principles of Diagnosis (DX-24), Program Committee Member",
+      "children": []
+     },
+     {
+      "key": "annual-conference-of-the-prognostics-and-health-management-s-3",
+      "label": null,
+      "html": "Annual Conference of the Prognostics and Health Management Society, 2024, <strong>Program Committee Member</strong>, <strong>Best Paper Award Selection Committee</strong>, <strong>Website Development Chair</strong>",
+      "text": "Annual Conference of the Prognostics and Health Management Society, 2024, Program Committee Member, Best Paper Award Selection Committee, Website Development Chair",
+      "children": []
+     },
+     {
+      "key": "34th-international-workshop-on-principles-of-diagnosis-dx-2",
+      "label": null,
+      "html": "34th International Workshop on Principles of Diagnosis (DX-23), <strong>Program Committee Member</strong>",
+      "text": "34th International Workshop on Principles of Diagnosis (DX-23), Program Committee Member",
+      "children": []
+     },
+     {
+      "key": "annual-conference-of-the-prognostics-and-health-management-s-4",
+      "label": null,
+      "html": "Annual Conference of the Prognostics and Health Management Society, 2023, <strong>Technical Program Committee Co-Chair</strong>, <strong>Website Development Chair</strong>",
+      "text": "Annual Conference of the Prognostics and Health Management Society, 2023, Technical Program Committee Co-Chair, Website Development Chair",
+      "children": []
+     },
+     {
+      "key": "annual-conference-of-the-prognostics-and-health-management-s-5",
+      "label": null,
+      "html": "Annual Conference of the Prognostics and Health Management Society, 2022, <strong>Technical Program Committee Member</strong>, <strong>Website Development Chair</strong>",
+      "text": "Annual Conference of the Prognostics and Health Management Society, 2022, Technical Program Committee Member, Website Development Chair",
+      "children": []
+     },
+     {
+      "key": "32nd-international-conference-on-industrial-engineering-o",
+      "label": null,
+      "html": "32nd International Conference on Industrial, Engineering &amp; Other Applications of Applied Intelligent Systems (IEA/AIE 2019), <strong>Program Committee Member</strong>",
+      "text": "32nd International Conference on Industrial, Engineering & Other Applications of Applied Intelligent Systems (IEA/AIE 2019), Program Committee Member",
+      "children": []
+     },
+     {
+      "key": "28th-international-workshop-on-principles-of-diagnosis-dx-1",
+      "label": null,
+      "html": "28th International Workshop on Principles of Diagnosis (DX-17), <strong>Program Committee Member</strong>",
+      "text": "28th International Workshop on Principles of Diagnosis (DX-17), Program Committee Member",
+      "children": []
+     },
+     {
+      "key": "ieee-aerospace-conference-2017-sessions-co-chair-session",
+      "label": null,
+      "html": "IEEE Aerospace Conference, 2017, <strong>Sessions Co-Chair</strong>, Session titled – Systems Health Management for Space Systems and Operations",
+      "text": "IEEE Aerospace Conference, 2017, Sessions Co-Chair, Session titled – Systems Health Management for Space Systems and Operations",
+      "children": []
+     },
+     {
+      "key": "27th-international-workshop-on-principles-of-diagnosis-dx-1",
+      "label": null,
+      "html": "27th International Workshop on Principles of Diagnosis (DX-16), <strong>Program Committee Member</strong>",
+      "text": "27th International Workshop on Principles of Diagnosis (DX-16), Program Committee Member",
+      "children": []
+     },
+     {
+      "key": "annual-conference-of-the-prognostics-and-health-management-s-6",
+      "label": null,
+      "html": "Annual Conference of the Prognostics and Health Management Society, 2016, <strong>Web Chair</strong>",
+      "text": "Annual Conference of the Prognostics and Health Management Society, 2016, Web Chair",
+      "children": []
+     },
+     {
+      "key": "third-european-conference-of-the-prognostics-and-health-mana",
+      "label": null,
+      "html": "Third European Conference of the Prognostics and Health Management Society, 2016, <strong>Technical Program Committee Member</strong>, <strong>Web Chair</strong>",
+      "text": "Third European Conference of the Prognostics and Health Management Society, 2016, Technical Program Committee Member, Web Chair",
+      "children": []
+     },
+     {
+      "key": "ieee-aerospace-conference-2016-sessions-organizer-and-chai",
+      "label": null,
+      "html": "IEEE Aerospace Conference, 2016, <strong>Sessions Organizer and Chair</strong>, Session titled – Systems Health Management for Space Systems and Operations",
+      "text": "IEEE Aerospace Conference, 2016, Sessions Organizer and Chair, Session titled – Systems Health Management for Space Systems and Operations",
+      "children": []
+     },
+     {
+      "key": "ieee-aerospace-conference-2015-sessions-organizer-and-chai",
+      "label": null,
+      "html": "IEEE Aerospace Conference, 2015, <strong>Sessions Organizer and Chair</strong>, Session titled – Systems Health Management for Space Systems and Operations",
+      "text": "IEEE Aerospace Conference, 2015, Sessions Organizer and Chair, Session titled – Systems Health Management for Space Systems and Operations",
+      "children": []
+     },
+     {
+      "key": "25th-international-workshop-on-principles-of-diagnosis-dx-1",
+      "label": null,
+      "html": "25th International Workshop on Principles of Diagnosis (DX-14), <strong>Program Committee Member</strong>",
+      "text": "25th International Workshop on Principles of Diagnosis (DX-14), Program Committee Member",
+      "children": []
+     },
+     {
+      "key": "annual-conference-of-the-prognostics-and-health-management-s-7",
+      "label": null,
+      "html": "Annual Conference of the Prognostics and Health Management Society, 2014, <strong>Technical Program Committee Member</strong> and <strong>Website Development Co-Chair</strong>",
+      "text": "Annual Conference of the Prognostics and Health Management Society, 2014, Technical Program Committee Member and Website Development Co-Chair",
+      "children": []
+     },
+     {
+      "key": "second-european-conference-of-the-prognostics-and-health-man",
+      "label": null,
+      "html": "Second European Conference of the Prognostics and Health Management Society, 2014, <strong>International Scientific Committee Member</strong> and <strong>Web Chair</strong>",
+      "text": "Second European Conference of the Prognostics and Health Management Society, 2014, International Scientific Committee Member and Web Chair",
+      "children": []
+     },
+     {
+      "key": "ieee-aerospace-conference-2014-sessions-organizer-and-chai",
+      "label": null,
+      "html": "IEEE Aerospace Conference, 2014, <strong>Sessions Organizer and Chair</strong>, Session titled – Systems Health Management for Space Systems and Operations",
+      "text": "IEEE Aerospace Conference, 2014, Sessions Organizer and Chair, Session titled – Systems Health Management for Space Systems and Operations",
+      "children": []
+     },
+     {
+      "key": "annual-conference-of-the-prognostics-and-health-management-s-8",
+      "label": null,
+      "html": "Annual Conference of the Prognostics and Health Management Society, 2013, <strong>Technical Program Committee Member</strong> and <strong>Proceedings Co-chair</strong>",
+      "text": "Annual Conference of the Prognostics and Health Management Society, 2013, Technical Program Committee Member and Proceedings Co-chair",
+      "children": []
+     },
+     {
+      "key": "24th-international-workshop-on-principles-of-diagnosis-dx-1",
+      "label": null,
+      "html": "24th International Workshop on Principles of Diagnosis (DX-13), <strong>Program Committee Member</strong>",
+      "text": "24th International Workshop on Principles of Diagnosis (DX-13), Program Committee Member",
+      "children": []
+     },
+     {
+      "key": "4th-international-diagnostic-competition-dxc-2013-organiz",
+      "label": null,
+      "html": "4th International Diagnostic Competition (DXC 2013), <strong>Organizing Committee Member</strong>",
+      "text": "4th International Diagnostic Competition (DXC 2013), Organizing Committee Member",
+      "children": []
+     },
+     {
+      "key": "annual-conference-of-the-prognostics-and-health-management-s-9",
+      "label": null,
+      "html": "Annual Conference of the Prognostics and Health Management Society, 2012, <strong>Proceedings Co-chair</strong>",
+      "text": "Annual Conference of the Prognostics and Health Management Society, 2012, Proceedings Co-chair",
+      "children": []
+     },
+     {
+      "key": "21st-international-workshop-on-principles-of-diagnosis-dx-1",
+      "label": null,
+      "html": "21st International Workshop on Principles of Diagnosis (DX-10), <strong>Workshop Organizing Committee</strong> and <strong>Proceedings Editor</strong>",
+      "text": "21st International Workshop on Principles of Diagnosis (DX-10), Workshop Organizing Committee and Proceedings Editor",
+      "children": []
+     },
+     {
+      "key": "18th-international-workshop-on-principles-of-diagnosis-dx-0",
+      "label": null,
+      "html": "18th International Workshop on Principles of Diagnosis (DX-07), <strong>Workshop Organizing Committee</strong> and <strong>Webmaster</strong>",
+      "text": "18th International Workshop on Principles of Diagnosis (DX-07), Workshop Organizing Committee and Webmaster",
+      "children": []
+     }
+    ]
+   },
+   {
+    "title": "Reviewing Activities: Journals",
+    "items": [
+     {
+      "key": "automatica",
+      "label": null,
+      "html": "Automatica",
+      "text": "Automatica",
+      "children": []
+     },
+     {
+      "key": "aiaa-journal-of-aerospace-information-systems",
+      "label": null,
+      "html": "AIAA Journal of Aerospace Information Systems",
+      "text": "AIAA Journal of Aerospace Information Systems",
+      "children": []
+     },
+     {
+      "key": "algorithms-an-mdpi-open-access-journal",
+      "label": null,
+      "html": "Algorithms – An MDPI Open Access Journal",
+      "text": "Algorithms – An MDPI Open Access Journal",
+      "children": []
+     },
+     {
+      "key": "international-journal-of-numerical-modelling-electronic-net",
+      "label": null,
+      "html": "International Journal of Numerical Modelling: Electronic Networks, Devices, and Fields",
+      "text": "International Journal of Numerical Modelling: Electronic Networks, Devices, and Fields",
+      "children": []
+     },
+     {
+      "key": "ieee-transactions-on-automation-science-and-engineering",
+      "label": null,
+      "html": "IEEE Transactions on Automation Science and Engineering",
+      "text": "IEEE Transactions on Automation Science and Engineering",
+      "children": []
+     },
+     {
+      "key": "archives-of-civil-and-mechanical-engineering",
+      "label": null,
+      "html": "Archives of Civil and Mechanical Engineering",
+      "text": "Archives of Civil and Mechanical Engineering",
+      "children": []
+     },
+     {
+      "key": "ieee-sensors-journal",
+      "label": null,
+      "html": "IEEE Sensors Journal",
+      "text": "IEEE Sensors Journal",
+      "children": []
+     },
+     {
+      "key": "engineering-applications-of-artificial-intelligence",
+      "label": null,
+      "html": "Engineering Applications of Artificial Intelligence",
+      "text": "Engineering Applications of Artificial Intelligence",
+      "children": []
+     },
+     {
+      "key": "simulation-transactions-of-the-society-for-modeling-and-sim",
+      "label": null,
+      "html": "SIMULATION: Transactions of the Society for Modeling and Simulation International",
+      "text": "SIMULATION: Transactions of the Society for Modeling and Simulation International",
+      "children": []
+     },
+     {
+      "key": "scs-simulation-modeling-practice-and-theory",
+      "label": null,
+      "html": "SCS Simulation Modeling Practice and Theory",
+      "text": "SCS Simulation Modeling Practice and Theory",
+      "children": []
+     },
+     {
+      "key": "ieee-transactions-on-control-systems-technology",
+      "label": null,
+      "html": "IEEE Transactions on Control Systems Technology",
+      "text": "IEEE Transactions on Control Systems Technology",
+      "children": []
+     },
+     {
+      "key": "ieee-transactions-on-instrumentation-and-measurement",
+      "label": null,
+      "html": "IEEE Transactions on Instrumentation and Measurement",
+      "text": "IEEE Transactions on Instrumentation and Measurement",
+      "children": []
+     },
+     {
+      "key": "ieee-transactions-on-systems-man-and-cybernetics-part-a",
+      "label": null,
+      "html": "IEEE Transactions on Systems, Man, and Cybernetics, Part A: Systems and Humans",
+      "text": "IEEE Transactions on Systems, Man, and Cybernetics, Part A: Systems and Humans",
+      "children": []
+     },
+     {
+      "key": "ieee-transactions-on-systems-man-and-cybernetics-part-c",
+      "label": null,
+      "html": "IEEE Transactions on Systems, Man, and Cybernetics, Part C: Applications and Reviews",
+      "text": "IEEE Transactions on Systems, Man, and Cybernetics, Part C: Applications and Reviews",
+      "children": []
+     },
+     {
+      "key": "international-journal-of-modeling-simulation-and-scientifi",
+      "label": null,
+      "html": "International Journal of Modeling, Simulation, and Scientific Computing",
+      "text": "International Journal of Modeling, Simulation, and Scientific Computing",
+      "children": []
+     },
+     {
+      "key": "international-journal-of-robust-and-nonlinear-control",
+      "label": null,
+      "html": "International Journal of Robust and Nonlinear Control",
+      "text": "International Journal of Robust and Nonlinear Control",
+      "children": []
+     },
+     {
+      "key": "international-journal-of-prognostics-and-health-management",
+      "label": null,
+      "html": "International Journal of Prognostics and Health Management",
+      "text": "International Journal of Prognostics and Health Management",
+      "children": []
+     }
+    ]
+   },
+   {
+    "title": "Reviewing Activities: Conferences and Workshops",
+    "items": [
+     {
+      "key": "annual-conference-of-the-prognostics-and-health-management-s-10",
+      "label": null,
+      "html": "Annual Conference of the Prognostics and Health Management Society (2009, 2011–2025)",
+      "text": "Annual Conference of the Prognostics and Health Management Society (2009, 2011–2025)",
+      "children": []
+     },
+     {
+      "key": "international-workshop-on-principles-of-diagnosis-dx-2006",
+      "label": null,
+      "html": "International Workshop on Principles of Diagnosis, DX (2006–2011, 2013–2017, 2023–2026)",
+      "text": "International Workshop on Principles of Diagnosis, DX (2006–2011, 2013–2017, 2023–2026)",
+      "children": []
+     },
+     {
+      "key": "european-conference-of-the-prognostics-and-health-management",
+      "label": null,
+      "html": "European Conference of the Prognostics and Health Management Society (2012, 2014, 2016, 2018, 2021, 2026)",
+      "text": "European Conference of the Prognostics and Health Management Society (2012, 2014, 2016, 2018, 2021, 2026)",
+      "children": []
+     },
+     {
+      "key": "ifac-symposium-on-fault-detection-supervision-and-safety-o",
+      "label": null,
+      "html": "IFAC Symposium on Fault Detection, Supervision, and Safety of Technical Processes, SAFEPROCESS (2009, 2012, 2015)",
+      "text": "IFAC Symposium on Fault Detection, Supervision, and Safety of Technical Processes, SAFEPROCESS (2009, 2012, 2015)",
+      "children": []
+     },
+     {
+      "key": "ifac-world-congress-2017-2026",
+      "label": null,
+      "html": "IFAC World Congress (2017, 2026)",
+      "text": "IFAC World Congress (2017, 2026)",
+      "children": []
+     },
+     {
+      "key": "ieee-aerospace-conference-2014-2015",
+      "label": null,
+      "html": "IEEE Aerospace Conference (2014, 2015)",
+      "text": "IEEE Aerospace Conference (2014, 2015)",
+      "children": []
+     },
+     {
+      "key": "mediterranean-conference-on-control-and-automation-2015-20",
+      "label": null,
+      "html": "Mediterranean Conference on Control and Automation (2015, 2016)",
+      "text": "Mediterranean Conference on Control and Automation (2015, 2016)",
+      "children": []
+     },
+     {
+      "key": "sae-aerotech-congress-exhibition-2013-2015",
+      "label": null,
+      "html": "SAE AeroTech Congress &amp; Exhibition (2013, 2015)",
+      "text": "SAE AeroTech Congress & Exhibition (2013, 2015)",
+      "children": []
+     },
+     {
+      "key": "international-conference-on-control-and-fault-tolerant-syste",
+      "label": null,
+      "html": "International Conference on Control and Fault-Tolerant Systems, SYSTOL (2025)",
+      "text": "International Conference on Control and Fault-Tolerant Systems, SYSTOL (2025)",
+      "children": []
+     },
+     {
+      "key": "vienna-international-conference-on-mathematical-modelling-2",
+      "label": null,
+      "html": "Vienna International Conference on Mathematical Modelling (2015)",
+      "text": "Vienna International Conference on Mathematical Modelling (2015)",
+      "children": []
+     },
+     {
+      "key": "ieee-multi-conference-on-systems-and-control-2014",
+      "label": null,
+      "html": "IEEE Multi-conference on Systems and Control (2014)",
+      "text": "IEEE Multi-conference on Systems and Control (2014)",
+      "children": []
+     },
+     {
+      "key": "american-control-conference-2009",
+      "label": null,
+      "html": "American Control Conference (2009)",
+      "text": "American Control Conference (2009)",
+      "children": []
+     },
+     {
+      "key": "ieee-real-time-and-embedded-technology-and-applications-symp",
+      "label": null,
+      "html": "IEEE Real-Time and Embedded Technology and Applications Symposium (2008)",
+      "text": "IEEE Real-Time and Embedded Technology and Applications Symposium (2008)",
+      "children": []
+     }
+    ]
+   },
+   {
+    "title": "Other Service",
+    "items": [
+     {
+      "key": "phm-special-interest-group-leader-elected-slb-eureka-comm",
+      "label": null,
+      "html": "<strong>PHM Special Interest Group Leader</strong> (elected), SLB Eureka Community, 2021 – set the annual technical agenda and personally organized 3 of the 5 PHM SIG webinars held that year",
+      "text": "PHM Special Interest Group Leader (elected), SLB Eureka Community, 2021 – set the annual technical agenda and personally organized 3 of the 5 PHM SIG webinars held that year",
+      "children": []
+     },
+     {
+      "key": "technical-reviewer-nasa-sbir-proposals-on-fault-diagnostics",
+      "label": null,
+      "html": "<strong>Technical Reviewer</strong>, NASA SBIR proposals on fault diagnostics and prognostics (5 proposals reviewed)",
+      "text": "Technical Reviewer, NASA SBIR proposals on fault diagnostics and prognostics (5 proposals reviewed)",
+      "children": []
+     },
+     {
+      "key": "sae-hm-1-ivhm-committee-20152018-co-author-of-arp6883",
+      "label": null,
+      "html": "<strong>SAE HM-1 IVHM Committee</strong> (2015–2018) – co-author of ARP6883, “Guidelines for Writing IVHM Requirements for Aerospace Systems”",
+      "text": "SAE HM-1 IVHM Committee (2015–2018) – co-author of ARP6883, “Guidelines for Writing IVHM Requirements for Aerospace Systems”",
+      "children": []
+     }
+    ]
+   }
+  ]
+ },
+ "talks": {
+  "title": "Talks",
+  "intro_html": "",
+  "groups": [
+   {
+    "title": "Invited Talks and Conference Tutorials",
+    "items": [
+     {
+      "key": "standards-awareness-resource-lets-design-it-mini-work",
+      "label": null,
+      "html": "“Standards Awareness Resource – Let’s Design it!” (Mini Workshop; Panel Moderator), Annual Conference of the Prognostics and Health Management Society, 2026.",
+      "text": "“Standards Awareness Resource – Let’s Design it!” (Mini Workshop; Panel Moderator), Annual Conference of the Prognostics and Health Management Society, 2026.",
+      "children": []
+     },
+     {
+      "key": "agentic-ai-systems-for-vehicle-health-management-panelist",
+      "label": null,
+      "html": "“Agentic AI Systems for Vehicle Health Management” (Panelist), Annual Conference of the Prognostics and Health Management Society, 2026.",
+      "text": "“Agentic AI Systems for Vehicle Health Management” (Panelist), Annual Conference of the Prognostics and Health Management Society, 2026.",
+      "children": []
+     },
+     {
+      "key": "hybrid-modeling-bridging-machine-learning-and-domain-knowl",
+      "label": null,
+      "html": "“<a href=\"https://phm2025.phmsociety.org/tutorials/\">Hybrid Modeling: Bridging Machine Learning and Domain Knowledge</a>” (Tutorial), Annual Conference of the Prognostics and Health Management Society, Bellevue, Washington, October 2025.",
+      "text": "“Hybrid Modeling: Bridging Machine Learning and Domain Knowledge” (Tutorial), Annual Conference of the Prognostics and Health Management Society, Bellevue, Washington, October 2025.",
+      "children": []
+     },
+     {
+      "key": "prognostics-and-health-management-in-the-cloud-an-introdu",
+      "label": null,
+      "html": "“<a href=\"https://phmsociety.org/conference/annual-conference-of-the-phm-society/annual-conference-of-the-prognostics-and-health-management-society-2019/tutorials-14/\">Prognostics and Health Management in the Cloud – An Introduction</a>” (Tutorial), Annual Conference of the Prognostics and Health Management Society, Scottsdale, Arizona, September 2019.",
+      "text": "“Prognostics and Health Management in the Cloud – An Introduction” (Tutorial), Annual Conference of the Prognostics and Health Management Society, Scottsdale, Arizona, September 2019.",
+      "children": []
+     },
+     {
+      "key": "model-based-prognostics-an-introduction-tutorial-annu",
+      "label": null,
+      "html": "“Model-based Prognostics – An Introduction” (Tutorial), Annual Conference of the Prognostics and Health Management Society, October 2017.",
+      "text": "“Model-based Prognostics – An Introduction” (Tutorial), Annual Conference of the Prognostics and Health Management Society, October 2017.",
+      "children": []
+     },
+     {
+      "key": "model-based-diagnostics-tutorial-annual-conference-of-t",
+      "label": null,
+      "html": "“Model-based Diagnostics” (Tutorial), Annual Conference of the Prognostics and Health Management Society, October 2016.",
+      "text": "“Model-based Diagnostics” (Tutorial), Annual Conference of the Prognostics and Health Management Society, October 2016.",
+      "children": []
+     },
+     {
+      "key": "real-time-safety-monitoring-and-prediction-for-the-national",
+      "label": null,
+      "html": "“Real-Time Safety Monitoring and Prediction for the National Airspace System,” Invited Talk at Palo Alto Research Center (PARC), May 2016.",
+      "text": "“Real-Time Safety Monitoring and Prediction for the National Airspace System,” Invited Talk at Palo Alto Research Center (PARC), May 2016.",
+      "children": []
+     }
+    ]
+   }
+  ]
+ },
+ "teaching": {
+  "title": "Teaching and Curriculum Development",
+  "intro_html": "",
+  "groups": [
+   {
+    "title": null,
+    "items": [
+     {
+      "key": "advanced-time-series-analysis-slb-next-ai-academy-2025",
+      "label": null,
+      "html": "<strong>“Advanced Time Series Analysis,” SLB NExT AI Academy</strong> 2025 – Present Selected by NExT, SLB’s external technical training organization, and approved by the client course coordinator to design and deliver the final and most advanced course in the AI Academy data science curriculum. Substantially revised approximately two-thirds of the existing material, adding time series foundation models, modern time series libraries, and deep learning-based time series methods alongside decomposition, forecasting, anomaly detection, and classification, and rebuilt the slides, assignments, and projects for every module. Delivered as a five-day in-person course to client engineers and scientists. The revised materials have since been adopted as the standard version of the course by other NExT instructors for subsequent client cohorts.",
+      "text": "“Advanced Time Series Analysis,” SLB NExT AI Academy 2025 – Present Selected by NExT, SLB’s external technical training organization, and approved by the client course coordinator to design and deliver the final and most advanced course in the AI Academy data science curriculum. Substantially revised approximately two-thirds of the existing material, adding time series foundation models, modern time series libraries, and deep learning-based time series methods alongside decomposition, forecasting, anomaly detection, and classification, and rebuilt the slides, assignments, and projects for every module. Delivered as a five-day in-person course to client engineers and scientists. The revised materials have since been adopted as the standard version of the course by other NExT instructors for subsequent client cohorts.",
+      "children": []
+     },
+     {
+      "key": "invited-tutorials-annual-conference-of-the-phm-society-2016",
+      "label": null,
+      "html": "<strong>Invited Tutorials, Annual Conference of the PHM Society</strong> 2016, 2017, 2019, 2025 Tutorial speakers are selected by invitation only. Designed and delivered four tutorials across a decade, each a standalone session introducing conference attendees to model-based diagnostics, model-based prognostics, cloud-deployed PHM, and hybrid modeling. Titles listed under Talks.",
+      "text": "Invited Tutorials, Annual Conference of the PHM Society 2016, 2017, 2019, 2025 Tutorial speakers are selected by invitation only. Designed and delivered four tutorials across a decade, each a standalone session introducing conference attendees to model-based diagnostics, model-based prognostics, cloud-deployed PHM, and hybrid modeling. Titles listed under Talks.",
+      "children": []
+     }
+    ]
+   }
+  ]
+ },
+ "memberships": {
+  "title": "Professional Memberships",
+  "intro_html": "",
+  "groups": [
+   {
+    "title": null,
+    "items": [
+     {
+      "key": "ieee-senior-member-2015present-member-20092015-gr",
+      "label": null,
+      "html": "<strong>IEEE</strong>: Senior Member (2015–Present) | Member (2009–2015) | Graduate Student Member (2007–2009)",
+      "text": "IEEE: Senior Member (2015–Present) | Member (2009–2015) | Graduate Student Member (2007–2009)",
+      "children": []
+     },
+     {
+      "key": "sae-hm-1-integrated-vehicle-health-management-committee-mem",
+      "label": null,
+      "html": "<strong>SAE HM-1 Integrated Vehicle Health Management Committee</strong>: Member of the Requirements for IVHM Working Group (2015–2018)",
+      "text": "SAE HM-1 Integrated Vehicle Health Management Committee: Member of the Requirements for IVHM Working Group (2015–2018)",
+      "children": []
+     },
+     {
+      "key": "prognostics-and-health-management-society-fellow-2023pres",
+      "label": null,
+      "html": "<strong><a href=\"https://phmsociety.org\">Prognostics and Health Management Society</a></strong>: Fellow (2023–Present) | Member (2009–Present) | Communications Assistant Director (2021–Present)",
+      "text": "Prognostics and Health Management Society: Fellow (2023–Present) | Member (2009–Present) | Communications Assistant Director (2021–Present)",
+      "children": []
+     }
+    ]
+   }
+  ]
+ }
+}
