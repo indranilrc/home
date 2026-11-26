@@ -4,6 +4,7 @@ from pathlib import Path
 import pytest
 
 from build import build_site
+from tests.siteconf import BASE, SITE, URL  # noqa: F401
 
 
 @pytest.fixture(scope="module")
@@ -31,7 +32,7 @@ def test_home_has_core_sections(home):
 
 
 def test_selected_work_links_to_research(home):
-    links = re.findall(r'href="/home/research/#([a-z-]+)"', home)
+    links = re.findall(re.escape(f'href="{BASE}/research/#') + r'([a-z-]+)"', home)
     assert 3 <= len(set(links)) <= 4
 
 

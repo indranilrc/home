@@ -264,4 +264,4 @@ def _norm(s: str) -> str:
 
 def verify_against_pdf(items: list[str], pdf_text: str) -> list[str]:
     hay = _norm(pdf_text)
-    return [it for it in items if _norm(it)[:50] not in hay]
+    return [it for it in items if _norm(it) not in hay]

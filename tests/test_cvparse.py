@@ -3,6 +3,8 @@ from pathlib import Path
 
 import pytest
 
+from tests.hygiene import denylisted
+
 from sitegen.cvparse import (
     extract_publications,
     parse_experience,
@@ -129,3 +131,36 @@ def test_real_cv_has_no_residue():
             for bad in FORBIDDEN:
                 assert bad not in low, (name, bad, s[:120])
             assert "internal" not in low.replace("international", ""), (name, s[:120])
+            assert not denylisted(s), name
+
+
+def test_verify_checks_whole_string():
+    head = "A" * 60
+    assert verify_against_pdf([head + " secret tail"], head + " public tail") == [head + " secret tail"]
+
+
+def _cv_dir(tmp_path):
+    d = tmp_path / "cv"
+    d.mkdir()
+    for name in ("publications.tex", "patents.tex", "experience.tex", "honors.tex", "education.tex"):
+        (d / name).write_text(load(name))
+    for name, title in (("prof-service.tex", "Professional Service"), ("talks.tex", "Talks"),
+                        ("teaching.tex", "Teaching"), ("professionalmembership.tex", "Professional Memberships")):
+        (d / name).write_text(f"\\textsc{{\\Large{{{title}}}}}\n\\begin{{list}}{{}}{{}}\n\\item Example entry for {title}.\n\\end{{list}}\n")
+    return d
+
+
+def test_import_writes_nothing_when_verification_fails(tmp_path):
+    from tools.import_cv import run_import
+    out = tmp_path / "gen"
+    missing = run_import(_cv_dir(tmp_path), "nothing matches here", out)
+    assert missing
+    assert not out.exists()
+
+
+def test_import_checks_experience_fields(tmp_path):
+    from tools.import_cv import run_import, collect_checks
+    d = _cv_dir(tmp_path)
+    checks = collect_checks(*__import__("tools.import_cv", fromlist=["parse_all"]).parse_all(d))
+    assert "Principal AI Scientist" in checks
+    assert "Menlo Park, California, USA" in checks

@@ -6,6 +6,7 @@ from pathlib import Path
 import pytest
 
 from build import ROOT, build_site
+from tests.siteconf import BASE, SITE, URL  # noqa: F401
 from sitegen.data import ContentError
 from sitegen.writing import load_posts
 
@@ -47,7 +48,7 @@ def test_post_renders_and_nav_appears(tmp_path):
     entries = feed.findall("a:entry", ns)
     assert len(entries) == 1
     assert entries[0].find("a:title", ns).text == "A First Note"
-    assert entries[0].find("a:link", ns).get("href") == "https://indranilrc.github.io/home/writing/first-note/"
+    assert entries[0].find("a:link", ns).get("href") == f"{URL}/writing/first-note/"
 
 
 def test_draft_excluded_unless_flag(tmp_path):
@@ -67,3 +68,15 @@ def test_post_missing_date_raises(tmp_path):
     with pytest.raises(ContentError) as e:
         load_posts(d, include_drafts=False)
     assert "x.md" in str(e.value)
+
+
+def test_domain_mode_build(tmp_path):
+    root = project_copy(tmp_path)
+    (root / "content" / "site.yml").write_text(
+        'title: Indranil Roychoudhury\nurl: https://indranilroychoudhury.com\nbase_path: ""\ncname: indranilroychoudhury.com\n')
+    out = tmp_path / "out"
+    build_site(out, root=root)
+    home = (out / "index.html").read_text()
+    assert 'href="/css/site.css"' in home and "/home/" not in home
+    assert '<link rel="canonical" href="https://indranilroychoudhury.com/">' in home
+    assert (out / "CNAME").read_text().strip() == "indranilroychoudhury.com"

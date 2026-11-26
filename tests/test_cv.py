@@ -3,6 +3,7 @@ import re
 import pytest
 
 from build import ROOT, build_site
+from tests.siteconf import BASE, SITE, URL  # noqa: F401
 from sitegen.data import load_content
 
 
@@ -24,7 +25,7 @@ def test_cv_sections_in_order(page):
 
 
 def test_cv_has_pdf_link(page):
-    assert 'href="/home/IndranilRoychoudhury_CV.pdf"' in page
+    assert f'href="{BASE}/IndranilRoychoudhury_CV.pdf"' in page
 
 
 def test_cv_no_brag_phrases(page):

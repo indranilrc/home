@@ -5,6 +5,7 @@ from pathlib import Path
 import pytest
 
 from build import ROOT, build_site
+from tests.siteconf import BASE, SITE, URL  # noqa: F401
 
 
 @pytest.fixture(scope="module")
@@ -25,7 +26,7 @@ def test_nav_without_posts(site):
     for label in ("Research", "Publications", "CV"):
         assert f">{label}</a>" in nav
     assert "Writing" not in nav
-    assert 'href="/home/research/"' in nav
+    assert f'href="{BASE}/research/"' in nav
 
 
 def test_theme_toggle_present(site):

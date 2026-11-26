@@ -3,6 +3,7 @@ import re
 import pytest
 
 from build import build_site
+from tests.siteconf import BASE, SITE, URL  # noqa: F401
 
 IDS = ["automating-phm", "hybrid-models", "foundation-models", "field-data",
        "airspace-safety", "aerospace-phm", "distributed-diagnosis"]
@@ -31,7 +32,7 @@ def test_related_patent_links_out(page):
 
 
 def test_research_nav_current(page):
-    assert re.search(r'<a href="/home/research/" aria-current="page">Research</a>', page)
+    assert f'<a href="{BASE}/research/" aria-current="page">Research</a>' in page
 
 
 def test_research_no_numbers_brag(page):
