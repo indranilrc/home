@@ -1,0 +1,8 @@
+# Plain-voice replacements and hides for the web CV page, keyed by the
+# entry keys in content/generated/cv.json. The PDF download is unaffected.
+#   experience:  KEY: {bullets: [...]}  or  {hide: true}
+#   honors|service|talks|teaching|memberships|education:  KEY: {html: "..."}  or  {hide: true}
+
+service:
+  # SLB-internal community role; not meaningful to outside readers.
+  phm-special-interest-group-leader-elected-slb-eureka-comm: {hide: true}

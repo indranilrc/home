@@ -1,0 +1,4 @@
+# Site-only extras for publications, keyed by the CV \bibitem key
+# (e.g. PHM-13-a) or patent number key (e.g. US12608592).
+# Fields: type, url, award, themes. Anything here overrides the CV import.
+{}
