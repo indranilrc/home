@@ -1,4 +1,17 @@
 {% extends "base.html.j2" %}
+{% block head_extra %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": profile.name,
+  "jobTitle": "Principal AI Scientist",
+  "worksFor": {"@type": "Organization", "name": "SLB"},
+  "alumniOf": {"@type": "CollegeOrUniversity", "name": "Vanderbilt University"},
+  "url": site.url ~ base ~ "/",
+  "image": site.url ~ base ~ "/img/IRCphoto.jpg",
+  "sameAs": profile.links | map(attribute="url") | list
+} | tojson }}</script>
+{% endblock %}
 {% block content %}
 <section class="hero">
   <svg class="motif" viewBox="0 0 1000 240" preserveAspectRatio="none" aria-hidden="true" focusable="false">

@@ -38,16 +38,34 @@ def build_site(out_dir: Path, include_drafts: bool = False, root: Path = ROOT) -
     if content.posts:
         nav.append(("Writing", "/writing/", "writing"))
     ctx = {"content": content, "profile": content.profile, "nav": nav, "build_date": dt.date.today()}
+    paths = []
     for rel, tpl, pid in PAGES:
-        write(out_dir, rel, env.get_template(tpl).render(page_id=pid, **ctx))
+        path = "/" + rel.removesuffix("index.html")
+        write(out_dir, rel, env.get_template(tpl).render(page_id=pid, page_path=path, **ctx))
+        if pid != "404":
+            paths.append(path)
     if content.posts:
         write(out_dir, "writing/index.html",
-              env.get_template("writing_index.html.j2").render(page_id="writing", **ctx))
+              env.get_template("writing_index.html.j2").render(page_id="writing", page_path="/writing/", **ctx))
+        paths.append("/writing/")
         for post in content.posts:
-            write(out_dir, f"writing/{post['slug']}/index.html",
-                  env.get_template("post.html.j2").render(page_id="writing", post=post, **ctx))
+            path = f"/writing/{post['slug']}/"
+            write(out_dir, path.lstrip("/") + "index.html",
+                  env.get_template("post.html.j2").render(page_id="writing", page_path=path, post=post, **ctx))
+            paths.append(path)
         write(out_dir, "writing/feed.xml", atom_feed(content.posts, content.site))
+    site_base = content.site["url"].rstrip("/") + (content.site.get("base_path") or "")
+    write(out_dir, "sitemap.xml", sitemap(site_base, paths))
+    write(out_dir, "robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {site_base}/sitemap.xml\n")
+    if content.site.get("cname"):
+        write(out_dir, "CNAME", content.site["cname"].strip() + "\n")
     copy_static(root / "static", out_dir)
+
+
+def sitemap(site_base: str, paths: list[str]) -> str:
+    urls = "".join(f"  <url><loc>{site_base}{p}</loc></url>\n" for p in paths)
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "</urlset>\n")
 
 
 def main() -> None:
